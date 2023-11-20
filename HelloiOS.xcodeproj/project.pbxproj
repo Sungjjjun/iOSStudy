@@ -15,7 +15,7 @@
 		CA0CAEB52B07432500DD4F87 /* HelloiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CAEB42B07432500DD4F87 /* HelloiOSTests.swift */; };
 		CA0CAEBF2B07432500DD4F87 /* HelloiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CAEBE2B07432500DD4F87 /* HelloiOSUITests.swift */; };
 		CA0CAEC12B07432500DD4F87 /* HelloiOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CAEC02B07432500DD4F87 /* HelloiOSUITestsLaunchTests.swift */; };
-		CA0CAECE2B0B409200DD4F87 /* SymbolRollerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CAECD2B0B409200DD4F87 /* SymbolRollerViewController.swift */; };
+		CA0CAED02B0B5CDF00DD4F87 /* SimpleWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CAECF2B0B5CDF00DD4F87 /* SimpleWeatherViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +48,7 @@
 		CA0CAEBA2B07432500DD4F87 /* HelloiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA0CAEBE2B07432500DD4F87 /* HelloiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloiOSUITests.swift; sourceTree = "<group>"; };
 		CA0CAEC02B07432500DD4F87 /* HelloiOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloiOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		CA0CAECD2B0B409200DD4F87 /* SymbolRollerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolRollerViewController.swift; sourceTree = "<group>"; };
+		CA0CAECF2B0B5CDF00DD4F87 /* SimpleWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleWeatherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +105,7 @@
 				CA0CAEA62B07432500DD4F87 /* Assets.xcassets */,
 				CA0CAEA82B07432500DD4F87 /* LaunchScreen.storyboard */,
 				CA0CAEAB2B07432500DD4F87 /* Info.plist */,
-				CA0CAECD2B0B409200DD4F87 /* SymbolRollerViewController.swift */,
+				CA0CAECF2B0B5CDF00DD4F87 /* SimpleWeatherViewController.swift */,
 			);
 			path = HelloiOS;
 			sourceTree = "<group>";
@@ -259,8 +259,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA0CAE9E2B07432400DD4F87 /* AppDelegate.swift in Sources */,
+				CA0CAED02B0B5CDF00DD4F87 /* SimpleWeatherViewController.swift in Sources */,
 				CA0CAEA02B07432400DD4F87 /* SceneDelegate.swift in Sources */,
-				CA0CAECE2B0B409200DD4F87 /* SymbolRollerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
