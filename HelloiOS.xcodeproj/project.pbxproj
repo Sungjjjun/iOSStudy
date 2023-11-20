@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		CA0CAE9E2B07432400DD4F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CAE9D2B07432400DD4F87 /* AppDelegate.swift */; };
 		CA0CAEA02B07432400DD4F87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CAE9F2B07432400DD4F87 /* SceneDelegate.swift */; };
-		CA0CAEA22B07432400DD4F87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CAEA12B07432400DD4F87 /* ViewController.swift */; };
 		CA0CAEA52B07432400DD4F87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA0CAEA32B07432400DD4F87 /* Main.storyboard */; };
 		CA0CAEA72B07432500DD4F87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA0CAEA62B07432500DD4F87 /* Assets.xcassets */; };
 		CA0CAEAA2B07432500DD4F87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA0CAEA82B07432500DD4F87 /* LaunchScreen.storyboard */; };
 		CA0CAEB52B07432500DD4F87 /* HelloiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CAEB42B07432500DD4F87 /* HelloiOSTests.swift */; };
 		CA0CAEBF2B07432500DD4F87 /* HelloiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CAEBE2B07432500DD4F87 /* HelloiOSUITests.swift */; };
 		CA0CAEC12B07432500DD4F87 /* HelloiOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CAEC02B07432500DD4F87 /* HelloiOSUITestsLaunchTests.swift */; };
+		CA0CAECE2B0B409200DD4F87 /* SymbolRollerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CAECD2B0B409200DD4F87 /* SymbolRollerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 		CA0CAE9A2B07432400DD4F87 /* HelloiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA0CAE9D2B07432400DD4F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA0CAE9F2B07432400DD4F87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CA0CAEA12B07432400DD4F87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CA0CAEA42B07432400DD4F87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA0CAEA62B07432500DD4F87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA0CAEA92B07432500DD4F87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		CA0CAEBA2B07432500DD4F87 /* HelloiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA0CAEBE2B07432500DD4F87 /* HelloiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloiOSUITests.swift; sourceTree = "<group>"; };
 		CA0CAEC02B07432500DD4F87 /* HelloiOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloiOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CA0CAECD2B0B409200DD4F87 /* SymbolRollerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolRollerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +101,11 @@
 			children = (
 				CA0CAE9D2B07432400DD4F87 /* AppDelegate.swift */,
 				CA0CAE9F2B07432400DD4F87 /* SceneDelegate.swift */,
-				CA0CAEA12B07432400DD4F87 /* ViewController.swift */,
 				CA0CAEA32B07432400DD4F87 /* Main.storyboard */,
 				CA0CAEA62B07432500DD4F87 /* Assets.xcassets */,
 				CA0CAEA82B07432500DD4F87 /* LaunchScreen.storyboard */,
 				CA0CAEAB2B07432500DD4F87 /* Info.plist */,
+				CA0CAECD2B0B409200DD4F87 /* SymbolRollerViewController.swift */,
 			);
 			path = HelloiOS;
 			sourceTree = "<group>";
@@ -258,9 +258,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA0CAEA22B07432400DD4F87 /* ViewController.swift in Sources */,
 				CA0CAE9E2B07432400DD4F87 /* AppDelegate.swift in Sources */,
 				CA0CAEA02B07432400DD4F87 /* SceneDelegate.swift in Sources */,
+				CA0CAECE2B0B409200DD4F87 /* SymbolRollerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
