@@ -15,10 +15,17 @@ class SymbolRollerViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var button: UIButton!
     
+    func reload() {
+        let symbol = symbols.randomElement()!
+        
+        imageView.image = UIImage(systemName: symbol)
+        label.text = symbol
+    }
+    
     // 화면에 보이지 않는 상태(보이기 전 준비, 메모리에 올라감)
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.image = UIImage(systemName: "sun.min")
+        reload()
         // Do any additional setup after loading the view.
     }
     
@@ -33,7 +40,7 @@ class SymbolRollerViewController: UIViewController {
     }
     
     @IBAction func buttonTapped(_ sender: Any) {
-        print("버튼 클릭됨...")
+        reload()
     }
     /*
     // MARK: - Navigation
