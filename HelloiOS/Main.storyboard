@@ -189,6 +189,9 @@
                                                     <color key="baseForegroundColor" systemColor="systemTealColor"/>
                                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hlZ-T8-r1Y"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -211,6 +214,12 @@
                             <constraint firstItem="psr-kM-35F" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="hLH-U7-Nk9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="2s1-SP-Fyi" id="mca-xi-oO0"/>
+                        <outlet property="city" destination="Hz7-t3-QdZ" id="KWe-MK-wka"/>
+                        <outlet property="imageView" destination="YAw-Qu-djX" id="Pgk-Qj-00E"/>
+                        <outlet property="temp" destination="Tdr-Mw-vll" id="FvK-8e-a5B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
