@@ -31,12 +31,25 @@ extension StockRankViewController: UICollectionViewDataSource {
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StockRankCollectionViewCell", for: indexPath)
+        // StockRankCollectionViewCell은 UICollectionViewCell 상속
+        // cell은 UICollectionViewCell이지만 StockRankCollectionViewCell은 아닐수 있음.
+        // 따라서, Casting을 통해 만약 StockRankCollectionViewCell인 경우에만 셀 업데이트
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StockRankCollectionViewCell", for: indexPath) as? StockRankCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        //StockRankCollectionViewCell인 경우
+        let stock = stockList[indexPath.item]
+        cell.configure(stock)
         return cell
         
     }
 }
 
 extension StockRankViewController: UICollectionViewDelegateFlowLayout {
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // width == collectionView width
+        // height =? 80
+        
+        return CGSize(width: collectionView.bounds.width, height: 80)
+    }
 }

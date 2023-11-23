@@ -92,6 +92,13 @@
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <size key="customSize" width="384" height="136"/>
+                                        <connections>
+                                            <outlet property="companyIcon" destination="uLz-zk-8La" id="XuU-mX-VWR"/>
+                                            <outlet property="companyLabel" destination="cWP-D3-1xD" id="482-Bv-lgB"/>
+                                            <outlet property="diffLabel" destination="Pje-yn-3Km" id="QSN-tt-h9s"/>
+                                            <outlet property="rankLabel" destination="o0W-ER-U3r" id="NEB-Q7-Wjv"/>
+                                            <outlet property="stockPrice" destination="ymJ-rs-dzB" id="R2i-jp-qI2"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
