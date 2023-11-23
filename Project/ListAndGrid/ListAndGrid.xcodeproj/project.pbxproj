@@ -17,6 +17,7 @@
 		CA0CAF7B2B0DD73B00DD4F87 /* ListAndGridUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CAF7A2B0DD73B00DD4F87 /* ListAndGridUITestsLaunchTests.swift */; };
 		CA0CAFC42B0DE8C000DD4F87 /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CAFC32B0DE8C000DD4F87 /* StockModel.swift */; };
 		CA0CAFC62B0DE92400DD4F87 /* StockRankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CAFC52B0DE92400DD4F87 /* StockRankViewController.swift */; };
+		CA0CAFC82B0F376600DD4F87 /* StockRankCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CAFC72B0F376600DD4F87 /* StockRankCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		CA0CAF7A2B0DD73B00DD4F87 /* ListAndGridUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAndGridUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CA0CAFC32B0DE8C000DD4F87 /* StockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
 		CA0CAFC52B0DE92400DD4F87 /* StockRankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRankViewController.swift; sourceTree = "<group>"; };
+		CA0CAFC72B0F376600DD4F87 /* StockRankCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRankCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				CA0CAF572B0DD73A00DD4F87 /* AppDelegate.swift */,
 				CA0CAF592B0DD73A00DD4F87 /* SceneDelegate.swift */,
 				CA0CAF5D2B0DD73A00DD4F87 /* Main.storyboard */,
+				CA0CAFC72B0F376600DD4F87 /* StockRankCollectionViewCell.swift */,
 				CA0CAF602B0DD73B00DD4F87 /* Assets.xcassets */,
 				CA0CAF622B0DD73B00DD4F87 /* LaunchScreen.storyboard */,
 				CA0CAF652B0DD73B00DD4F87 /* Info.plist */,
@@ -263,6 +266,7 @@
 			files = (
 				CA0CAFC42B0DE8C000DD4F87 /* StockModel.swift in Sources */,
 				CA0CAF582B0DD73A00DD4F87 /* AppDelegate.swift in Sources */,
+				CA0CAFC82B0F376600DD4F87 /* StockRankCollectionViewCell.swift in Sources */,
 				CA0CAF5A2B0DD73A00DD4F87 /* SceneDelegate.swift in Sources */,
 				CA0CAFC62B0DE92400DD4F87 /* StockRankViewController.swift in Sources */,
 			);
