@@ -24,7 +24,7 @@ class StockRankCollectionViewCell: UICollectionViewCell {
         companyLabel.text = stock.name
         stockPrice.text = "\(price) 원"
         diffLabel.text = "\(stock.diff)%"
-        diffLabel.textColor = stock.diff <= 0 ? .red : .blue
+        diffLabel.textColor = stock.diff > 0 ? UIColor.systemRed : UIColor.systemBlue
     }
     
     // 1000 -> 1,000
