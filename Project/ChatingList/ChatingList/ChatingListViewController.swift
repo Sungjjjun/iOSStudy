@@ -9,21 +9,34 @@ import UIKit
 
 class ChatingListViewController: UIViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    let chat: [Chat] = Chat.list
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.dataSource = self
+        collectionView.delegate = self
+    }
+}
 
-        // Do any additional setup after loading the view.
+extension ChatingListViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return chat.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ChatingListCollectionViewCell", for: indexPath) as? ChatingListCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        cell.configure(chat[indexPath.item])
+        return cell
     }
-    */
+    
+    
+}
 
+extension ChatingListViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.bounds.width, height: 100)
+    }
 }

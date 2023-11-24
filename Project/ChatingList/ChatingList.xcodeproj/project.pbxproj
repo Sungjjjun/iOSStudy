@@ -17,6 +17,7 @@
 		CA0CAFF92B107D1B00DD4F87 /* ChatingListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CAFF82B107D1B00DD4F87 /* ChatingListUITestsLaunchTests.swift */; };
 		CA0CB0062B107D4E00DD4F87 /* ChatingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CB0052B107D4E00DD4F87 /* ChatingListViewController.swift */; };
 		CA0CB00A2B107E5900DD4F87 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CB0092B107E5900DD4F87 /* Chat.swift */; };
+		CA0CB00C2B10F1B600DD4F87 /* ChatingListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CB00B2B10F1B600DD4F87 /* ChatingListCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		CA0CAFF82B107D1B00DD4F87 /* ChatingListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatingListUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CA0CB0052B107D4E00DD4F87 /* ChatingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatingListViewController.swift; sourceTree = "<group>"; };
 		CA0CB0092B107E5900DD4F87 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		CA0CB00B2B10F1B600DD4F87 /* ChatingListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatingListCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				CA0CAFD52B107D1A00DD4F87 /* AppDelegate.swift */,
 				CA0CAFD72B107D1A00DD4F87 /* SceneDelegate.swift */,
 				CA0CAFDB2B107D1A00DD4F87 /* Main.storyboard */,
+				CA0CB00B2B10F1B600DD4F87 /* ChatingListCollectionViewCell.swift */,
 				CA0CAFDE2B107D1A00DD4F87 /* Assets.xcassets */,
 				CA0CAFE02B107D1A00DD4F87 /* LaunchScreen.storyboard */,
 				CA0CB0052B107D4E00DD4F87 /* ChatingListViewController.swift */,
@@ -265,6 +268,7 @@
 				CA0CB00A2B107E5900DD4F87 /* Chat.swift in Sources */,
 				CA0CB0062B107D4E00DD4F87 /* ChatingListViewController.swift in Sources */,
 				CA0CAFD82B107D1A00DD4F87 /* SceneDelegate.swift in Sources */,
+				CA0CB00C2B10F1B600DD4F87 /* ChatingListCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
