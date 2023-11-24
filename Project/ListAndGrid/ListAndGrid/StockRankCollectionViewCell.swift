@@ -17,11 +17,22 @@ class StockRankCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var diffLabel: UILabel!
     
     func configure(_ stock: StockModel) {
+        let price = convertToCurrencyFomat(price: stock.price)
+        
         rankLabel.text = "\(stock.rank)"
         companyIcon.image = UIImage(named: stock.imageName)
         companyLabel.text = stock.name
-        stockPrice.text = "\(stock.price) 원"
+        stockPrice.text = "\(price) 원"
         diffLabel.text = "\(stock.diff)%"
         diffLabel.textColor = stock.diff <= 0 ? .red : .blue
+    }
+    
+    // 1000 -> 1,000
+    func convertToCurrencyFomat(price: Int) -> String {
+        let numberFomatter = NumberFormatter()
+        numberFomatter.numberStyle = .decimal
+        numberFomatter.maximumFractionDigits = 0
+        let result = numberFomatter.string(from: NSNumber(value: price)) ?? ""
+        return result
     }
 }
