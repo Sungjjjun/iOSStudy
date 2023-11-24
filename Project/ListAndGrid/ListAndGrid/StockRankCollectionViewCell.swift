@@ -36,3 +36,4 @@ class StockRankCollectionViewCell: UICollectionViewCell {
         return result
     }
 }
+
