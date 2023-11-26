@@ -10,13 +10,19 @@ import UIKit
 class ChatingListViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    let chat: [Chat] = Chat.list
+    var chat: [Chat] = Chat.list
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        chat.sort(by: {chat1, chat2 in
+            return chat1.date > chat2.date
+        })
+        
         collectionView.dataSource = self
         collectionView.delegate = self
     }
+    
 }
 
 extension ChatingListViewController: UICollectionViewDataSource {

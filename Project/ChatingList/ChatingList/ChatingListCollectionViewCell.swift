@@ -14,6 +14,12 @@ class ChatingListCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
+    // Custom CollectionViewCell 호출 시 제일 먼저 실행되는 함수
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        profileImageView.layer.cornerRadius = 10
+    }
+    
     func configure(_ chat: Chat) {
         profileImageView.image = UIImage(named: chat.name)
         nameLabel.text = chat.name
