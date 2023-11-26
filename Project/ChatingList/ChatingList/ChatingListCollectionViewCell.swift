@@ -18,6 +18,18 @@ class ChatingListCollectionViewCell: UICollectionViewCell {
         profileImageView.image = UIImage(named: chat.name)
         nameLabel.text = chat.name
         messageLabel.text = chat.chat
-        dateLabel.text = chat.date
+        dateLabel.text = formattedDateString(dateString: chat.date)
+    }
+    
+    func formattedDateString(dateString: String) -> String{
+        // String -> Date -> String
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        
+        guard let date = formatter.date(from: dateString) else {
+            return ""
+        }
+        formatter.dateFormat = "M/d"
+        return formatter.string(from: date)
     }
 }
