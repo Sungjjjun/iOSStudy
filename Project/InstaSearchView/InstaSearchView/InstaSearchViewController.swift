@@ -12,13 +12,19 @@ class InstaSearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.delegate = self
+        collectionView.dataSource = self
         
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.estimatedItemSize = .zero
         }
         
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        self.navigationItem.title = "Search"
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Your Animal"
+        searchController.searchResultsUpdater = self
+        self.navigationItem.searchController = searchController
     }
 }
 
@@ -50,5 +56,12 @@ extension InstaSearchViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 1
+    }
+}
+
+extension InstaSearchViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let search = searchController.searchBar.text ?? ""
+        print(search)
     }
 }
