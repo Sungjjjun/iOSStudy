@@ -17,6 +17,7 @@
 		94B353EA2813A6B400B6C232 /* NRCOnboardingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B353E92813A6B400B6C232 /* NRCOnboardingUITestsLaunchTests.swift */; };
 		94B353FB2813B1B700B6C232 /* OnboardingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B353FA2813B1B700B6C232 /* OnboardingMessage.swift */; };
 		CA0CB01A2B15C87600DD4F87 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CB0192B15C87600DD4F87 /* OnboardingViewController.swift */; };
+		CA0CB01C2B170D7F00DD4F87 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CB01B2B170D7F00DD4F87 /* OnboardingCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		94B353E92813A6B400B6C232 /* NRCOnboardingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRCOnboardingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		94B353FA2813B1B700B6C232 /* OnboardingMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingMessage.swift; sourceTree = "<group>"; };
 		CA0CB0192B15C87600DD4F87 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		CA0CB01B2B170D7F00DD4F87 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				94B353C82813A6B300B6C232 /* SceneDelegate.swift */,
 				94B353FA2813B1B700B6C232 /* OnboardingMessage.swift */,
 				94B353CC2813A6B300B6C232 /* Main.storyboard */,
+				CA0CB01B2B170D7F00DD4F87 /* OnboardingCollectionViewCell.swift */,
 				CA0CB0192B15C87600DD4F87 /* OnboardingViewController.swift */,
 				94B353CF2813A6B400B6C232 /* Assets.xcassets */,
 				94B353D12813A6B400B6C232 /* LaunchScreen.storyboard */,
@@ -263,6 +266,7 @@
 			files = (
 				94B353C72813A6B300B6C232 /* AppDelegate.swift in Sources */,
 				94B353C92813A6B300B6C232 /* SceneDelegate.swift in Sources */,
+				CA0CB01C2B170D7F00DD4F87 /* OnboardingCollectionViewCell.swift in Sources */,
 				94B353FB2813B1B700B6C232 /* OnboardingMessage.swift in Sources */,
 				CA0CB01A2B15C87600DD4F87 /* OnboardingViewController.swift in Sources */,
 			);
