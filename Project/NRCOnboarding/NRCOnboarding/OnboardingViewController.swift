@@ -11,11 +11,19 @@ class OnboardingViewController: UIViewController {
     
     let list: [OnboardingMessage] = OnboardingMessage.messages
 
+    @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.estimatedItemSize = .zero
+        }
+        
+        pageControl.numberOfPages = list.count
+        pageControl.currentPage = 0
     }
 }
 
@@ -35,9 +43,26 @@ extension OnboardingViewController: UICollectionViewDataSource {
 
 extension OnboardingViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.bounds.width
-        let height = collectionView.bounds.height
-        return CGSize(width: width, height: height)
+        return collectionView.bounds.size
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return .zero
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return .zero
+    }
+}
+
+extension OnboardingViewController: UIScrollViewDelegate {
+    // 페이지 스크롤 시
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    }
+    
+    //페이지 스크롤 하다가 멈춘 경우
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let index = Int(scrollView.contentOffset.x / collectionView.bounds.width)
+        pageControl.currentPage = index
+    }
 }
