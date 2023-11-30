@@ -29,8 +29,42 @@ class AppleFrameworkViewController: UIViewController {
     // - layout
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.delegate = self
-        navigationController?.navigationBar.topItem?.title = "🥸 I'm from Codes"
+        
+        // Presentation
+        dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, item in
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AppleFrameworkCollectionViewCell", for: indexPath) as? AppleFrameworkCollectionViewCell else {
+                return nil
+            }
+            cell.configure(item)
+            return cell
+        })
+        
+        //Data
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(list, toSection: .main)
+        dataSource.apply(snapshot)
+        
+        //Layout
+        collectionView.collectionViewLayout = layout()
+    }
+    
+    private func layout() -> UICollectionViewCompositionalLayout{
+        // Item
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        // Group
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(0.33))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 3)
+        
+        //Section
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)
+        
+        // Layout
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        return layout
     }
 }
 
