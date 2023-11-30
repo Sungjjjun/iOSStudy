@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="07K-eu-e7f">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Head Space Focus View Controller-->
+        <scene sceneID="I8F-xe-kcA">
+            <objects>
+                <viewController storyboardIdentifier="HeadSpaceFocusViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="07K-eu-e7f" customClass="HeadSpaceFocusViewController" customModule="HeadSpaceFocus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ndd-tE-Rzx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kG2-Vf-2k8">
+                                <rect key="frame" x="0.0" y="48" width="414" height="848"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8i9-bp-qik">
+                                    <size key="itemSize" width="414" height="188"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="HeadSpaceFocusCell" reuseIdentifier="HeadSpaceFocusCell" id="3xS-7I-aDS" customClass="HeadSpaceFocusCell" customModule="HeadSpaceFocus" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="188"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="23y-ls-6CU">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="188"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick Focus Resets" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6S-Ui-aPl">
+                                                    <rect key="frame" x="20" y="30" width="152" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Short exercises for getting back into focus" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIR-Rm-GcO">
+                                                    <rect key="frame" x="20" y="61.5" width="205" height="41"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UAv-Bx-QhD">
+                                                    <rect key="frame" x="264" y="-0.5" width="150" height="188.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="X3b-Er-kBr"/>
+                                                    </constraints>
+                                                    <imageReference key="image" image="sun.max.fill" catalog="system" renderingMode="original"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="CIR-Rm-GcO" firstAttribute="top" secondItem="x6S-Ui-aPl" secondAttribute="bottom" constant="12" id="7O6-Si-atk"/>
+                                                <constraint firstItem="UAv-Bx-QhD" firstAttribute="top" secondItem="23y-ls-6CU" secondAttribute="top" id="7zt-eD-9Ff"/>
+                                                <constraint firstAttribute="bottom" secondItem="UAv-Bx-QhD" secondAttribute="bottom" id="Ix9-EO-1DM"/>
+                                                <constraint firstAttribute="trailing" secondItem="UAv-Bx-QhD" secondAttribute="trailing" id="J8R-cj-9uY"/>
+                                                <constraint firstItem="CIR-Rm-GcO" firstAttribute="leading" secondItem="23y-ls-6CU" secondAttribute="leading" constant="20" id="JVY-Jj-uDd"/>
+                                                <constraint firstItem="UAv-Bx-QhD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CIR-Rm-GcO" secondAttribute="trailing" constant="30" id="MJD-dl-o03"/>
+                                                <constraint firstItem="UAv-Bx-QhD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="x6S-Ui-aPl" secondAttribute="trailing" constant="30" id="UGb-aS-8qv"/>
+                                                <constraint firstItem="x6S-Ui-aPl" firstAttribute="top" secondItem="23y-ls-6CU" secondAttribute="top" constant="30" id="W6W-Wq-yV0"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="CIR-Rm-GcO" secondAttribute="bottom" constant="30" id="WbQ-5b-bCE"/>
+                                                <constraint firstItem="x6S-Ui-aPl" firstAttribute="leading" secondItem="23y-ls-6CU" secondAttribute="leading" constant="20" id="xtV-41-SNh"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="414" height="188"/>
+                                        <connections>
+                                            <outlet property="contentLabel" destination="CIR-Rm-GcO" id="9Qc-zM-boH"/>
+                                            <outlet property="titleLabel" destination="x6S-Ui-aPl" id="UDC-6U-euY"/>
+                                            <outlet property="weatherImageView" destination="UAv-Bx-QhD" id="eye-75-nVR"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xIF-vf-ToX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kG2-Vf-2k8" firstAttribute="leading" secondItem="xIF-vf-ToX" secondAttribute="leading" id="0Hb-c1-wsv"/>
+                            <constraint firstItem="kG2-Vf-2k8" firstAttribute="trailing" secondItem="xIF-vf-ToX" secondAttribute="trailing" id="8ky-0D-jf0"/>
+                            <constraint firstItem="kG2-Vf-2k8" firstAttribute="bottom" secondItem="Ndd-tE-Rzx" secondAttribute="bottom" id="hTJ-sx-Mm5"/>
+                            <constraint firstItem="kG2-Vf-2k8" firstAttribute="top" secondItem="xIF-vf-ToX" secondAttribute="top" id="pGa-rM-tqw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqZ-hT-Jgd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-75.362318840579718" y="108.48214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sun.max.fill" catalog="system" width="128" height="125"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
