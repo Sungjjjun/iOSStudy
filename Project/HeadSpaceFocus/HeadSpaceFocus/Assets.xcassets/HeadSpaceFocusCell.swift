@@ -14,7 +14,7 @@ class HeadSpaceFocusCell: UICollectionViewCell {
     
     func configure(_ focus: Focus) {
         titleLabel.text = focus.title
-        contentLabel.text = focus.title
+        contentLabel.text = focus.description
         weatherImageView.image = UIImage(systemName: focus.imageName)
     }
 }
