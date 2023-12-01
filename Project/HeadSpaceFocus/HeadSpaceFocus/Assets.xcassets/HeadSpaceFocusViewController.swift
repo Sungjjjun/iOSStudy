@@ -9,18 +9,18 @@ import UIKit
 
 class HeadSpaceFocusViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
+    var list: [Focus] = Focus.list
+    
     enum Section {
         case main
     }
-    
     typealias Item = Focus
-    var dataSource: UICollectionViewDiffableDataSource<Section, Item>!
     
-    let list: [Focus] = Focus.list
+    var dataSource: UICollectionViewDiffableDataSource<Section, Item>!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Presentation
+        //Presentation
         dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, item in
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeadSpaceFocusCell", for: indexPath) as? HeadSpaceFocusCell else {
                 return nil
@@ -29,24 +29,26 @@ class HeadSpaceFocusViewController: UIViewController {
             return cell
         })
         
-        // Data
+        //Data
         var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
         snapshot.appendSections([.main])
         snapshot.appendItems(list, toSection: .main)
         dataSource.apply(snapshot)
         
-        // Layout
+        //Layout
         collectionView.collectionViewLayout = layout()
     }
     
-    private func layout() -> UICollectionViewCompositionalLayout {
+    private func layout() ->UICollectionViewCompositionalLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(50))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(50))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
-      
+        
         let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 15)
+        section.interGroupSpacing = 10
         
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
