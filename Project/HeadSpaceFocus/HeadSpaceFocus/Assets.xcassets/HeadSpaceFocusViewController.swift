@@ -9,6 +9,8 @@ import UIKit
 
 class HeadSpaceFocusViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet var refreshButton: UIButton!
+    var curated: Bool = false // 추천된 상태
     var list: [Focus] = Focus.list
     
     enum Section {
@@ -19,6 +21,7 @@ class HeadSpaceFocusViewController: UIViewController {
     var dataSource: UICollectionViewDiffableDataSource<Section, Item>!
     override func viewDidLoad() {
         super.viewDidLoad()
+        refreshButton.layer.cornerRadius = 10
         
         //Presentation
         dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, item in
@@ -37,6 +40,8 @@ class HeadSpaceFocusViewController: UIViewController {
         
         //Layout
         collectionView.collectionViewLayout = layout()
+        
+        updateTitle()
     }
     
     private func layout() ->UICollectionViewCompositionalLayout {
@@ -53,4 +58,22 @@ class HeadSpaceFocusViewController: UIViewController {
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
     }
- }
+    
+    // 버튼 타이틀 업데이트
+    func updateTitle() {
+        let title = curated ? "See All" : "See Recommendation"
+        refreshButton.setTitle(title, for: .normal)
+    }
+    
+    @IBAction func isButtonTapped(_ sender: Any) {
+        curated.toggle()
+        self.list = curated ? Focus.recommendations : Focus.list
+        
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(list, toSection: .main)
+        dataSource.apply(snapshot)
+        
+        updateTitle()
+    }
+}
