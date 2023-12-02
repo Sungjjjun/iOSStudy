@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Framework Detail View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController restorationIdentifier="FrameworkDetailViewController" storyboardIdentifier="FrameworkDetailViewController" id="Y6W-OH-hqX" customClass="FrameworkDetailViewController" customModule="AppleFramework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8wc-65-Mig">
+                                <rect key="frame" x="20" y="248.99999999999997" width="353" height="379.33333333333326"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jld-9m-Pv2">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="90"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arkit" translatesAutoresizingMaskIntoConstraints="NO" id="8ZD-5j-DGB">
+                                                <rect key="frame" x="131.66666666666666" y="0.0" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="9ZD-om-KcJ"/>
+                                                    <constraint firstAttribute="width" constant="90" id="lh5-sF-Fsu"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="8ZD-5j-DGB" secondAttribute="bottom" id="GgR-qD-Bbj"/>
+                                            <constraint firstItem="8ZD-5j-DGB" firstAttribute="top" secondItem="jld-9m-Pv2" secondAttribute="top" id="IIx-MW-0iu"/>
+                                            <constraint firstItem="8ZD-5j-DGB" firstAttribute="centerX" secondItem="jld-9m-Pv2" secondAttribute="centerX" id="QBf-Kf-G4g"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ekS-BL-oVV">
+                                        <rect key="frame" x="0.0" y="100" width="353" height="90"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARKit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCB-yW-9uC">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="90"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="nCB-yW-9uC" secondAttribute="bottom" id="1AX-yE-BJ6"/>
+                                            <constraint firstAttribute="trailing" secondItem="nCB-yW-9uC" secondAttribute="trailing" id="aYw-Tg-Ahd"/>
+                                            <constraint firstItem="nCB-yW-9uC" firstAttribute="top" secondItem="ekS-BL-oVV" secondAttribute="top" id="huX-Vg-v4I"/>
+                                            <constraint firstItem="nCB-yW-9uC" firstAttribute="leading" secondItem="ekS-BL-oVV" secondAttribute="leading" id="rol-jw-C2z"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pgA-C5-XPQ">
+                                        <rect key="frame" x="0.0" y="200" width="353" height="179.33333333333337"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0d-Ja-Qpv">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="179.33333333333334"/>
+                                                <string key="text">ARKit 5 brings Location Anchors to London and more cities across the United States, allowing you to create AR experiences for specific places, like the London Eye, Times Square, and even your own neighborhood. ARKit 5 also features improvements to Motion Tracking and support for Face Tracking in the Ultra Wide camera on iPad Pro (5th generation). And with a new App Clip Code anchor, you can pin virtual content from your App Clip or ARKit app to a printed or digital App Clip Code.</string>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="s0d-Ja-Qpv" firstAttribute="leading" secondItem="pgA-C5-XPQ" secondAttribute="leading" id="2HM-P7-EW5"/>
+                                            <constraint firstItem="s0d-Ja-Qpv" firstAttribute="top" secondItem="pgA-C5-XPQ" secondAttribute="top" id="HT5-aZ-RaN"/>
+                                            <constraint firstAttribute="bottom" secondItem="s0d-Ja-Qpv" secondAttribute="bottom" id="KSc-Gs-yS8"/>
+                                            <constraint firstAttribute="trailing" secondItem="s0d-Ja-Qpv" secondAttribute="trailing" id="zav-vT-uxq"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Dy-Ok-CGa">
+                                <rect key="frame" x="71.666666666666686" y="768" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bHd-3q-eUn"/>
+                                    <constraint firstAttribute="width" constant="250" id="xHc-Bu-MnO"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Learn More" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="19"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8wc-65-Mig" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="99E-XN-lL5"/>
+                            <constraint firstItem="1Dy-Ok-CGa" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="EIc-1o-fnz"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="1Dy-Ok-CGa" secondAttribute="bottom" id="SEV-wR-9tK"/>
+                            <constraint firstItem="8wc-65-Mig" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="SIk-NS-Sti"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8wc-65-Mig" secondAttribute="trailing" constant="20" id="rZq-d9-i2N"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arkit" width="256" height="256"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -47,6 +47,8 @@ class AppleFrameworkViewController: UIViewController {
         
         //Layout
         collectionView.collectionViewLayout = layout()
+        
+        collectionView.delegate = self
     }
     
     private func layout() -> UICollectionViewCompositionalLayout{
@@ -74,5 +76,11 @@ extension AppleFrameworkViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let framework = list[indexPath.item]
         print(framework.name)
+        
+        // FrameworkDetailViewController를 띄우기 (Modal)
+        let storyBoard = UIStoryboard(name: "Detail", bundle: nil)
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "FrameworkDetailViewController") as! FrameworkDetailViewController
+        present(viewController, animated: true)
+        
     }
 }

@@ -18,6 +18,8 @@
 		948CD21B2812ADBA003DC0C4 /* FramewokData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948CD21A2812ADBA003DC0C4 /* FramewokData.swift */; };
 		CA0CB00E2B1313F900DD4F87 /* AppleFrameworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CB00D2B1313F900DD4F87 /* AppleFrameworkViewController.swift */; };
 		CA0CB0102B13203B00DD4F87 /* AppleFrameworkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CB00F2B13203B00DD4F87 /* AppleFrameworkCollectionViewCell.swift */; };
+		CA0CB0222B1B246900DD4F87 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA0CB0212B1B246900DD4F87 /* Detail.storyboard */; };
+		CA0CB0242B1B248D00DD4F87 /* FrameworkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CB0232B1B248D00DD4F87 /* FrameworkDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		948CD21A2812ADBA003DC0C4 /* FramewokData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FramewokData.swift; sourceTree = "<group>"; };
 		CA0CB00D2B1313F900DD4F87 /* AppleFrameworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleFrameworkViewController.swift; sourceTree = "<group>"; };
 		CA0CB00F2B13203B00DD4F87 /* AppleFrameworkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleFrameworkCollectionViewCell.swift; sourceTree = "<group>"; };
+		CA0CB0212B1B246900DD4F87 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		CA0CB0232B1B248D00DD4F87 /* FrameworkDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 				948CD1EC2812AD5E003DC0C4 /* SceneDelegate.swift */,
 				948CD21A2812ADBA003DC0C4 /* FramewokData.swift */,
 				948CD1F02812AD5E003DC0C4 /* Main.storyboard */,
+				CA0CB0212B1B246900DD4F87 /* Detail.storyboard */,
+				CA0CB0232B1B248D00DD4F87 /* FrameworkDetailViewController.swift */,
 				CA0CB00F2B13203B00DD4F87 /* AppleFrameworkCollectionViewCell.swift */,
 				948CD1F32812AD5F003DC0C4 /* Assets.xcassets */,
 				948CD1F52812AD5F003DC0C4 /* LaunchScreen.storyboard */,
@@ -240,6 +246,7 @@
 				948CD1F72812AD5F003DC0C4 /* LaunchScreen.storyboard in Resources */,
 				948CD1F42812AD5F003DC0C4 /* Assets.xcassets in Resources */,
 				948CD1F22812AD5E003DC0C4 /* Main.storyboard in Resources */,
+				CA0CB0222B1B246900DD4F87 /* Detail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +275,7 @@
 				CA0CB00E2B1313F900DD4F87 /* AppleFrameworkViewController.swift in Sources */,
 				948CD1EB2812AD5E003DC0C4 /* AppDelegate.swift in Sources */,
 				948CD1ED2812AD5E003DC0C4 /* SceneDelegate.swift in Sources */,
+				CA0CB0242B1B248D00DD4F87 /* FrameworkDetailViewController.swift in Sources */,
 				948CD21B2812ADBA003DC0C4 /* FramewokData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
