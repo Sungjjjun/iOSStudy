@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8wc-65-Mig">
-                                <rect key="frame" x="20" y="248.99999999999997" width="353" height="379.33333333333326"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8wc-65-Mig">
+                                <rect key="frame" x="20" y="228.99999999999997" width="353" height="419.33333333333326"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jld-9m-Pv2">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="90"/>
@@ -37,12 +38,11 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ekS-BL-oVV">
-                                        <rect key="frame" x="0.0" y="100" width="353" height="90"/>
+                                        <rect key="frame" x="0.0" y="120" width="353" height="90"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARKit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCB-yW-9uC">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="90"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -54,13 +54,12 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pgA-C5-XPQ">
-                                        <rect key="frame" x="0.0" y="200" width="353" height="179.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="240" width="353" height="179.33333333333337"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0d-Ja-Qpv">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="179.33333333333334"/>
                                                 <string key="text">ARKit 5 brings Location Anchors to London and more cities across the United States, allowing you to create AR experiences for specific places, like the London Eye, Times Square, and even your own neighborhood. ARKit 5 also features improvements to Motion Tracking and support for Face Tracking in the Ultra Wide camera on iPad Pro (5th generation). And with a new App Clip Code anchor, you can pin virtual content from your App Clip or ARKit app to a printed or digital App Clip Code.</string>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -87,10 +86,13 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="19"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onTappedLearnMore:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="XNi-uH-fEA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="8wc-65-Mig" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="99E-XN-lL5"/>
                             <constraint firstItem="1Dy-Ok-CGa" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="EIc-1o-fnz"/>
@@ -99,6 +101,11 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8wc-65-Mig" secondAttribute="trailing" constant="20" id="rZq-d9-i2N"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="s0d-Ja-Qpv" id="6p2-G3-n9c"/>
+                        <outlet property="iconImageView" destination="8ZD-5j-DGB" id="xlT-ZY-juW"/>
+                        <outlet property="nameLabel" destination="nCB-yW-9uC" id="az4-fm-k8r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -107,6 +114,9 @@
     </scenes>
     <resources>
         <image name="arkit" width="256" height="256"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

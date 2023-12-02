@@ -75,12 +75,17 @@ class AppleFrameworkViewController: UIViewController {
 extension AppleFrameworkViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let framework = list[indexPath.item]
-        print(framework.name)
         
         // FrameworkDetailViewController를 띄우기 (Modal)
         let storyBoard = UIStoryboard(name: "Detail", bundle: nil)
         let viewController = storyBoard.instantiateViewController(withIdentifier: "FrameworkDetailViewController") as! FrameworkDetailViewController
-        present(viewController, animated: true)
+        viewController.framework = framework
         
+//        // 모달뷰 에니메이션 스타일
+//        viewController.modalTransitionStyle = .flipHorizontal
+//
+//        // 풀스크린
+//        viewController.modalPresentationStyle = .fullScreen
+        present(viewController, animated: true)
     }
 }
