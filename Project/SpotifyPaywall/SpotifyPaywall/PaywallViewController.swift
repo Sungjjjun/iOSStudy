@@ -29,6 +29,7 @@ class PaywallViewController: UIViewController {
                 return nil
             }
             cell.configure(item)
+            cell.backgroundColor = self.colors[indexPath.item]
             return cell
         })
         
@@ -46,11 +47,12 @@ class PaywallViewController: UIViewController {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.8), heightDimension: .absolute(200))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
+        section.interGroupSpacing = 20
+        section.orthogonalScrollingBehavior = .groupPagingCentered
         
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
