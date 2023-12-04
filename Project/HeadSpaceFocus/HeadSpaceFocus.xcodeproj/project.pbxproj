@@ -18,6 +18,10 @@
 		943BB57728151183005A1B6E /* Focus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943BB57628151183005A1B6E /* Focus.swift */; };
 		CA0CB01E2B1888EF00DD4F87 /* HeadSpaceFocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CB01D2B1888EF00DD4F87 /* HeadSpaceFocusViewController.swift */; };
 		CA0CB0202B188C7000DD4F87 /* HeadSpaceFocusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CB01F2B188C7000DD4F87 /* HeadSpaceFocusCell.swift */; };
+		CA0CB0262B1D9F3500DD4F87 /* QuickFocus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CB0252B1D9F3500DD4F87 /* QuickFocus.swift */; };
+		CA0CB0282B1D9F7600DD4F87 /* QuickFocus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA0CB0272B1D9F7600DD4F87 /* QuickFocus.storyboard */; };
+		CA0CB02A2B1D9F8D00DD4F87 /* QuickFocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CB0292B1D9F8D00DD4F87 /* QuickFocusViewController.swift */; };
+		CA0CB02C2B1DA44200DD4F87 /* QuickFocusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CB02B2B1DA44200DD4F87 /* QuickFocusCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		943BB57628151183005A1B6E /* Focus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Focus.swift; sourceTree = "<group>"; };
 		CA0CB01D2B1888EF00DD4F87 /* HeadSpaceFocusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HeadSpaceFocusViewController.swift; path = Assets.xcassets/HeadSpaceFocusViewController.swift; sourceTree = "<group>"; };
 		CA0CB01F2B188C7000DD4F87 /* HeadSpaceFocusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HeadSpaceFocusCell.swift; path = Assets.xcassets/HeadSpaceFocusCell.swift; sourceTree = "<group>"; };
+		CA0CB0252B1D9F3500DD4F87 /* QuickFocus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuickFocus.swift; path = "../../../../../../../Downloads/fc-ios-bible-for-beginner-2022-master/Part3_iOS_Development_Basic/Ch7-Navigation_and_Modal/07_02-HeadSpaceFocus/starter/07_02-HeadSpaceFocus/HeadSpaceFocus/QuickFocus.swift"; sourceTree = "<group>"; };
+		CA0CB0272B1D9F7600DD4F87 /* QuickFocus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuickFocus.storyboard; sourceTree = "<group>"; };
+		CA0CB0292B1D9F8D00DD4F87 /* QuickFocusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickFocusViewController.swift; sourceTree = "<group>"; };
+		CA0CB02B2B1DA44200DD4F87 /* QuickFocusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickFocusCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +115,11 @@
 				943BB54428150EFA005A1B6E /* SceneDelegate.swift */,
 				943BB57628151183005A1B6E /* Focus.swift */,
 				CA0CB01D2B1888EF00DD4F87 /* HeadSpaceFocusViewController.swift */,
+				CA0CB0252B1D9F3500DD4F87 /* QuickFocus.swift */,
 				943BB54828150EFA005A1B6E /* Main.storyboard */,
+				CA0CB0272B1D9F7600DD4F87 /* QuickFocus.storyboard */,
+				CA0CB0292B1D9F8D00DD4F87 /* QuickFocusViewController.swift */,
+				CA0CB02B2B1DA44200DD4F87 /* QuickFocusCell.swift */,
 				CA0CB01F2B188C7000DD4F87 /* HeadSpaceFocusCell.swift */,
 				943BB54B28150EFB005A1B6E /* Assets.xcassets */,
 				943BB54D28150EFB005A1B6E /* LaunchScreen.storyboard */,
@@ -238,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				943BB54F28150EFB005A1B6E /* LaunchScreen.storyboard in Resources */,
+				CA0CB0282B1D9F7600DD4F87 /* QuickFocus.storyboard in Resources */,
 				943BB54C28150EFB005A1B6E /* Assets.xcassets in Resources */,
 				943BB54A28150EFA005A1B6E /* Main.storyboard in Resources */,
 			);
@@ -264,8 +277,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA0CB0262B1D9F3500DD4F87 /* QuickFocus.swift in Sources */,
 				CA0CB0202B188C7000DD4F87 /* HeadSpaceFocusCell.swift in Sources */,
+				CA0CB02A2B1D9F8D00DD4F87 /* QuickFocusViewController.swift in Sources */,
 				943BB57728151183005A1B6E /* Focus.swift in Sources */,
+				CA0CB02C2B1DA44200DD4F87 /* QuickFocusCell.swift in Sources */,
 				943BB54328150EFA005A1B6E /* AppDelegate.swift in Sources */,
 				CA0CB01E2B1888EF00DD4F87 /* HeadSpaceFocusViewController.swift in Sources */,
 				943BB54528150EFA005A1B6E /* SceneDelegate.swift in Sources */,
