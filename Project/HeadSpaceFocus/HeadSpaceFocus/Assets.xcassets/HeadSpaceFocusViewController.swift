@@ -40,6 +40,7 @@ class HeadSpaceFocusViewController: UIViewController {
         
         //Layout
         collectionView.collectionViewLayout = layout()
+        collectionView.delegate = self
         
         updateTitle()
     }
@@ -75,5 +76,15 @@ class HeadSpaceFocusViewController: UIViewController {
         dataSource.apply(snapshot)
         
         updateTitle()
+    }
+}
+
+extension HeadSpaceFocusViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let item = list[indexPath.item]
+        let storyBoard = UIStoryboard(name: "QuickFocus", bundle: nil)
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "QuickFocusViewController") as! QuickFocusViewController
+        
+        present(viewController, animated: true)
     }
 }
