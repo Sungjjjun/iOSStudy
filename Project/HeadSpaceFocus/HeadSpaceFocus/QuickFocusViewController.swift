@@ -57,6 +57,8 @@ class QuickFocusViewController: UIViewController {
         
         // Layout -> Compositional Layout
         colletionView.collectionViewLayout = layout()
+        
+        self.navigationItem.largeTitleDisplayMode = .never
     }
     
     func layout() -> UICollectionViewCompositionalLayout{

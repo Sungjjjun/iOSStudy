@@ -81,10 +81,11 @@ class HeadSpaceFocusViewController: UIViewController {
 
 extension HeadSpaceFocusViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let item = list[indexPath.item]
         let storyBoard = UIStoryboard(name: "QuickFocus", bundle: nil)
         let viewController = storyBoard.instantiateViewController(withIdentifier: "QuickFocusViewController") as! QuickFocusViewController
         
-        present(viewController, animated: true)
+//        present(viewController, animated: true)
+        viewController.title = list[indexPath.item].title
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
