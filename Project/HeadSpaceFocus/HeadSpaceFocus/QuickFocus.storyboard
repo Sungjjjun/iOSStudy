@@ -87,6 +87,9 @@
                             <constraint firstItem="Lyo-Kz-Pep" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="zOl-ov-sKF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colletionView" destination="Lyo-Kz-Pep" id="czz-2O-exb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
