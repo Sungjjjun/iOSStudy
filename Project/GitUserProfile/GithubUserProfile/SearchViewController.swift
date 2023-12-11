@@ -62,7 +62,9 @@ class UserProfileViewController: UIViewController {
         self.loginLabel.text = user.login
         self.followerLabel.text = "follower: \(user.followers)"
         self.followingLabel.text = "following: \(user.following)"
-        self.thumbnail.image = nil
+        
+        // Image 넣기 (URL으로)
+        self.thumbnail.kf.setImage(with: user.avatarUrl)
     }
 }
 
@@ -111,7 +113,12 @@ extension UserProfileViewController: UISearchBarDelegate {
             .receive(on: RunLoop.main)
             .print()
             .sink { completion in
-                print(completion)
+                switch completion {
+                case .failure(let error):
+                    print(error)
+                    self.user = nil
+                case .finished: break
+                }
             } receiveValue: { user in
                 self.user = user
             }
