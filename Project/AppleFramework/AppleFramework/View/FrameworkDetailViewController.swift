@@ -11,9 +11,8 @@ import Combine
 
 class FrameworkDetailViewController: UIViewController {
     // @Published var framework: AppleFramework = AppleFramework(name: "Unknown", imageName: "", urlString: "", description: "")
-    let framework = CurrentValueSubject<AppleFramework, Never>(AppleFramework(name: "Unknown", imageName: "", urlString: "", description: ""))
-    let buttonTapped = PassthroughSubject<AppleFramework, Never>()
     var subscription = Set<AnyCancellable>()
+    var viewModel: FrameworkDetailViewModel!
     
     @IBOutlet var iconImageView: UIImageView!
     @IBOutlet var nameLabel: UILabel!
@@ -26,7 +25,7 @@ class FrameworkDetailViewController: UIViewController {
     
     private func bind() {
         // Input: Button Clicked(Framework -> URL -> Safari -> present)
-        buttonTapped
+        viewModel.buttonTapped
             .receive(on: RunLoop.main)
             .compactMap { URL(string: $0.urlString) }
             .sink { [unowned self] url in
@@ -36,7 +35,7 @@ class FrameworkDetailViewController: UIViewController {
             .store(in: &subscription)
     
         // Output: UI Update
-        framework
+        viewModel.framework
             .receive(on: RunLoop.main)
             .sink { [unowned self] framework in
                 iconImageView.image = UIImage(named: framework.imageName)
@@ -47,6 +46,6 @@ class FrameworkDetailViewController: UIViewController {
     }
     
     @IBAction func onTappedLearnMore(_ sender: Any) {
-        buttonTapped.send(framework.value)
+        viewModel.learnMoreTapped()
     }
 }

@@ -113,8 +113,7 @@
 			children = (
 				948CD1EA2812AD5E003DC0C4 /* AppDelegate.swift */,
 				948CD1EC2812AD5E003DC0C4 /* SceneDelegate.swift */,
-				CA78F23E2B2ADBE600618C87 /* FrameworkListViewModel.swift */,
-				CA78F2402B2ADBFE00618C87 /* FrameworkDetailViewModel.swift */,
+				CA78F2422B2AE48200618C87 /* ViewModel */,
 				CA78F23C2B2ADB8F00618C87 /* Model */,
 				CA78F23D2B2ADBB600618C87 /* View */,
 				948CD1F32812AD5F003DC0C4 /* Assets.xcassets */,
@@ -159,6 +158,15 @@
 				CA0CB0212B1B246900DD4F87 /* Detail.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CA78F2422B2AE48200618C87 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CA78F23E2B2ADBE600618C87 /* FrameworkListViewModel.swift */,
+				CA78F2402B2ADBFE00618C87 /* FrameworkDetailViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

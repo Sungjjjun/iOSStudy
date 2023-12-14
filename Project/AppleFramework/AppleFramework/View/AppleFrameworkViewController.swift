@@ -52,7 +52,7 @@ class AppleFrameworkViewController: UIViewController {
             .sink { framework in
                 let storyBoard = UIStoryboard(name: "Detail", bundle: nil)
                 let viewController = storyBoard.instantiateViewController(withIdentifier: "FrameworkDetailViewController") as! FrameworkDetailViewController
-                viewController.framework.send(framework)
+                viewController.viewModel = FrameworkDetailViewModel(framework: framework)
                 
                 // 모달뷰 에니메이션 스타일
                 // viewController.modalTransitionStyle = .flipHorizontal
