@@ -4,9 +4,8 @@ import Combine
 class SearchViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
-    @Published private(set) var users: [SearchResult] = []
     var subscriptions = Set<AnyCancellable>()
-    let network = NetworkService(configuration: .default)
+    var viewModel: SearchViewModel!
     
     enum Section {
         case main
@@ -17,6 +16,7 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = SearchViewModel(network: NetworkService(configuration: .default))
         embedSearchController()
         configureColletionView()
         bind()
@@ -66,7 +66,7 @@ class SearchViewController: UIViewController {
     // Data Binding
     private func bind() {
         // - Data -> View
-        $users
+        viewModel.$users
             .receive(on: RunLoop.main)
             .sink { users in
                 // 검색된 사용자를 CollectionView Update (Snapshot)
@@ -82,51 +82,12 @@ class SearchViewController: UIViewController {
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let keyword = searchBar.text, !keyword.isEmpty else { return }
-        print("Button Clicked: \(keyword)")
+        viewModel.search(keyword: keyword)
     }
 }
 
 extension SearchViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         let keyword = searchController.searchBar.text ?? ""
-        print("Input Text: \(keyword)")
-        
-        let resource = Resource<SearchUserResponse>(
-            base: "https://api.github.com/",
-            path: "search/users",
-            params: ["q": keyword],
-            header: ["Content-Type": "application/json"])
-        
-        network.load(resource)
-            .map{ $0.items }
-            .replaceError(with: [])
-            .receive(on: RunLoop.main)
-            .assign(to: \.users, on: self)
-            .store(in: &subscriptions)
-        
-        // Request 생성
-//        let base = "https://api.github.com/"
-//        let path = "search/users"
-//        let params: [String: String] = ["q": keyword]
-//        let header: [String: String] = ["Content-Type": "application/json"]
-//
-//        var urlComponents = URLComponents(string: base + path)!
-//        let queryItem = params.map { (key: String, value: String) in
-//            return URLQueryItem(name: key, value: value)
-//        }
-//        urlComponents.queryItems = queryItem
-//        var request = URLRequest(url: urlComponents.url!)
-//        header.forEach { (key: String, value: String) in
-//            request.addValue(value, forHTTPHeaderField: key)
-//        }
-//
-//        URLSession.shared.dataTaskPublisher(for: request)
-//            .map{ $0.data }
-//            .decode(type: SearchUserResponse.self, decoder: JSONDecoder())
-//            .map{ $0.items }
-//            .replaceError(with: [])
-//            .receive(on: RunLoop.main)
-//            .assign(to: \.users, on: self)
-//            .store(in: &subscriptions)
     }
 }
