@@ -20,6 +20,8 @@
 		CA0CB0102B13203B00DD4F87 /* AppleFrameworkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CB00F2B13203B00DD4F87 /* AppleFrameworkCollectionViewCell.swift */; };
 		CA0CB0222B1B246900DD4F87 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA0CB0212B1B246900DD4F87 /* Detail.storyboard */; };
 		CA0CB0242B1B248D00DD4F87 /* FrameworkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CB0232B1B248D00DD4F87 /* FrameworkDetailViewController.swift */; };
+		CA78F23F2B2ADBE600618C87 /* FrameworkListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78F23E2B2ADBE600618C87 /* FrameworkListViewModel.swift */; };
+		CA78F2412B2ADBFE00618C87 /* FrameworkDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78F2402B2ADBFE00618C87 /* FrameworkDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		CA0CB00F2B13203B00DD4F87 /* AppleFrameworkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleFrameworkCollectionViewCell.swift; sourceTree = "<group>"; };
 		CA0CB0212B1B246900DD4F87 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		CA0CB0232B1B248D00DD4F87 /* FrameworkDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailViewController.swift; sourceTree = "<group>"; };
+		CA78F23E2B2ADBE600618C87 /* FrameworkListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkListViewModel.swift; sourceTree = "<group>"; };
+		CA78F2402B2ADBFE00618C87 /* FrameworkDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,15 +113,13 @@
 			children = (
 				948CD1EA2812AD5E003DC0C4 /* AppDelegate.swift */,
 				948CD1EC2812AD5E003DC0C4 /* SceneDelegate.swift */,
-				948CD21A2812ADBA003DC0C4 /* FramewokData.swift */,
-				948CD1F02812AD5E003DC0C4 /* Main.storyboard */,
-				CA0CB0212B1B246900DD4F87 /* Detail.storyboard */,
-				CA0CB0232B1B248D00DD4F87 /* FrameworkDetailViewController.swift */,
-				CA0CB00F2B13203B00DD4F87 /* AppleFrameworkCollectionViewCell.swift */,
+				CA78F23E2B2ADBE600618C87 /* FrameworkListViewModel.swift */,
+				CA78F2402B2ADBFE00618C87 /* FrameworkDetailViewModel.swift */,
+				CA78F23C2B2ADB8F00618C87 /* Model */,
+				CA78F23D2B2ADBB600618C87 /* View */,
 				948CD1F32812AD5F003DC0C4 /* Assets.xcassets */,
 				948CD1F52812AD5F003DC0C4 /* LaunchScreen.storyboard */,
 				948CD1F82812AD5F003DC0C4 /* Info.plist */,
-				CA0CB00D2B1313F900DD4F87 /* AppleFrameworkViewController.swift */,
 			);
 			path = AppleFramework;
 			sourceTree = "<group>";
@@ -137,6 +139,26 @@
 				948CD20D2812AD5F003DC0C4 /* AppleFrameworkUITestsLaunchTests.swift */,
 			);
 			path = AppleFrameworkUITests;
+			sourceTree = "<group>";
+		};
+		CA78F23C2B2ADB8F00618C87 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				948CD21A2812ADBA003DC0C4 /* FramewokData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CA78F23D2B2ADBB600618C87 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA0CB00F2B13203B00DD4F87 /* AppleFrameworkCollectionViewCell.swift */,
+				CA0CB00D2B1313F900DD4F87 /* AppleFrameworkViewController.swift */,
+				CA0CB0232B1B248D00DD4F87 /* FrameworkDetailViewController.swift */,
+				948CD1F02812AD5E003DC0C4 /* Main.storyboard */,
+				CA0CB0212B1B246900DD4F87 /* Detail.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,9 +295,11 @@
 			files = (
 				CA0CB0102B13203B00DD4F87 /* AppleFrameworkCollectionViewCell.swift in Sources */,
 				CA0CB00E2B1313F900DD4F87 /* AppleFrameworkViewController.swift in Sources */,
+				CA78F23F2B2ADBE600618C87 /* FrameworkListViewModel.swift in Sources */,
 				948CD1EB2812AD5E003DC0C4 /* AppDelegate.swift in Sources */,
 				948CD1ED2812AD5E003DC0C4 /* SceneDelegate.swift in Sources */,
 				CA0CB0242B1B248D00DD4F87 /* FrameworkDetailViewController.swift in Sources */,
+				CA78F2412B2ADBFE00618C87 /* FrameworkDetailViewModel.swift in Sources */,
 				948CD21B2812ADBA003DC0C4 /* FramewokData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

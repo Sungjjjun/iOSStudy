@@ -22,9 +22,7 @@ class AppleFrameworkViewController: UIViewController {
     
     // Combine
     var subscriptions = Set<AnyCancellable>()
-    let didSelect = PassthroughSubject<AppleFramework, Never>()
-    let items = CurrentValueSubject<[AppleFramework], Never>(AppleFramework.list)
-    // @Published var list: [AppleFramework] = AppleFramework.list
+    var viewModel: FrameworkListViewModel!
     
     // Data, Presentation, Layout
     // diffable data source
@@ -35,18 +33,23 @@ class AppleFrameworkViewController: UIViewController {
     // - layout
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = FrameworkListViewModel(items: AppleFramework.list)
         configureCollectionView()
         bind()
     }
     
     // 핵심 로직 (Combine으로 구성)
     private func bind() {
-        // Input: 사용자 입력을 받아서, 처리해야할 것
-        // - item 선택 되었을 때
-        didSelect
+        viewModel.items
             .receive(on: RunLoop.main)
-            .sink { [unowned self] framework in
-                // FrameworkDetailViewController를 띄우기 (Modal)
+            .sink { [unowned self] list in
+                self.applySectionItems(list)
+            }.store(in: &subscriptions)
+        
+        viewModel.selectedItem
+            .compactMap { $0 }
+            .receive(on: RunLoop.main)
+            .sink { framework in
                 let storyBoard = UIStoryboard(name: "Detail", bundle: nil)
                 let viewController = storyBoard.instantiateViewController(withIdentifier: "FrameworkDetailViewController") as! FrameworkDetailViewController
                 viewController.framework.send(framework)
@@ -57,14 +60,6 @@ class AppleFrameworkViewController: UIViewController {
                 // 풀스크린
                 // viewController.modalPresentationStyle = .fullScreen
                 self.present(viewController, animated: true)
-            }.store(in: &subscriptions)
-        
-        // Output: data, state 변경에 따라서, UI 업데이트
-        // - items가 세팅 되었을 때, CollectionView 업데이트
-        items
-            .receive(on: RunLoop.main)
-            .sink { [unowned self] list in
-                self.applySectionItems(list)
             }.store(in: &subscriptions)
     }
     
@@ -114,7 +109,6 @@ class AppleFrameworkViewController: UIViewController {
 // 클릭된 앱이 무엇인지
 extension AppleFrameworkViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let framework = items.value[indexPath.item]
-        didSelect.send(framework)
+        viewModel.didSelect(at: indexPath)
     }
 }
