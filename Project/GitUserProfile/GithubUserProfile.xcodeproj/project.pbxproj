@@ -21,6 +21,7 @@
 		941BDB4F2842570D00DF0BFC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941BDB4E2842570D00DF0BFC /* SearchViewController.swift */; };
 		941BDB512842574700DF0BFC /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941BDB502842574700DF0BFC /* UserProfile.swift */; };
 		CA78F23B2B2368E900618C87 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CA78F23A2B2368E900618C87 /* Kingfisher */; };
+		CA78F2462B2B309400618C87 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78F2452B2B309400618C87 /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		941BDB4C284256B900DF0BFC /* Publisher+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Publisher+Utils.swift"; sourceTree = "<group>"; };
 		941BDB4E2842570D00DF0BFC /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		941BDB502842574700DF0BFC /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		CA78F2452B2B309400618C87 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +116,8 @@
 				941BDB182842567A00DF0BFC /* SceneDelegate.swift */,
 				941BDB4B284256B900DF0BFC /* Utils */,
 				941BDB46284256AD00DF0BFC /* Network */,
-				941BDB1C2842567A00DF0BFC /* Main.storyboard */,
-				941BDB4E2842570D00DF0BFC /* SearchViewController.swift */,
+				CA78F2432B2B303700618C87 /* View */,
+				CA78F2442B2B303F00618C87 /* ViewModel */,
 				941BDB52284257DC00DF0BFC /* Model */,
 				941BDB1F2842567B00DF0BFC /* Assets.xcassets */,
 				941BDB212842567B00DF0BFC /* LaunchScreen.storyboard */,
@@ -171,6 +173,23 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA78F2432B2B303700618C87 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				941BDB1C2842567A00DF0BFC /* Main.storyboard */,
+				941BDB4E2842570D00DF0BFC /* SearchViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CA78F2442B2B303F00618C87 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CA78F2452B2B309400618C87 /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +331,7 @@
 			files = (
 				941BDB4F2842570D00DF0BFC /* SearchViewController.swift in Sources */,
 				941BDB512842574700DF0BFC /* UserProfile.swift in Sources */,
+				CA78F2462B2B309400618C87 /* SearchViewModel.swift in Sources */,
 				941BDB172842567A00DF0BFC /* AppDelegate.swift in Sources */,
 				941BDB49284256AD00DF0BFC /* NetworkService.swift in Sources */,
 				941BDB4A284256AD00DF0BFC /* Resource.swift in Sources */,
