@@ -98,12 +98,12 @@
 		9486F0A628386AC10069AEB0 /* StockRank-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				CA68BC8C2B302F5E000FDB8F /* StockRankRow.swift */,
 				9486F0A728386AC10069AEB0 /* StockRank_SwiftUIApp.swift */,
 				9486F0D128386AE60069AEB0 /* StockModel.swift */,
 				9486F0A928386AC10069AEB0 /* StockRankView.swift */,
 				9486F0AB28386AC20069AEB0 /* Assets.xcassets */,
 				9486F0AD28386AC20069AEB0 /* Preview Content */,
-				CA68BC8C2B302F5E000FDB8F /* StockRankRow.swift */,
 			);
 			path = "StockRank-SwiftUI";
 			sourceTree = "<group>";

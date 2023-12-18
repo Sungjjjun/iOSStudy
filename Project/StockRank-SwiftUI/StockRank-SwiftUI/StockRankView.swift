@@ -8,9 +8,27 @@
 import SwiftUI
 
 struct StockRankView: View {
+    
+    @State var list = StockModel.list
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        // Cell 재사용을 위한 List
+        List(list, id: \.self) { item in
+            StockRankRow(stockModel: item)
+                .listRowInsets(EdgeInsets(.zero))
+                .listSectionSeparator(.hidden)
+                .frame(height: 80)
+        }
+        .listStyle(.plain)
+        .background(.black)
+        
+        // ScollView는 Cell 재사용 X
+//        ScrollView {
+//            ForEach(list, id: \.self) { stock in
+//                StockRankRow(stockModel: stock)
+//            }
+//        }
     }
 }
 
