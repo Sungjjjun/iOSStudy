@@ -12,9 +12,13 @@ struct FrameworkListView: View {
         @State var list: [AppleFramework] = AppleFramework.list
         
         let layout: [GridItem] = [
-            GridItem(.flexible()),
-            GridItem(.flexible()),
-            GridItem(.flexible()),
+            // Flexible => 화면 크기에 비례하여 아이템 크기 조절
+            // Fixed => 아이템 크기 고정
+            // Adaptive => 아이템 크기에 비례해서 화면에 아이템 갯수 조절
+            GridItem(.adaptive(minimum: 100))
+//            GridItem(.flexible()),
+//            GridItem(.flexible()),
+//            GridItem(.flexible()),
         ]
         
         // Grid 만들기
