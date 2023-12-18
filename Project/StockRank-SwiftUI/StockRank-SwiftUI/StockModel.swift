@@ -7,7 +7,16 @@
 
 import Foundation
 
-struct StockModel: Hashable{
+struct StockModel: Hashable, Identifiable{
+    
+    // 각 요소들을 구분할 수 있는 정보로 ID 지정 (Unique Value)
+    var id: String {
+        return name
+    }
+    
+    // 랜덤 값으로 고유 아이디 생성 (보통 사용하는 방법)
+    // var id: UUID = UUID()
+    
     let rank: Int
     let imageName: String
     let name: String
