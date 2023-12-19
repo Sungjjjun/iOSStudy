@@ -14,8 +14,8 @@ struct StockRankView: View {
     var body: some View {
         
         // Cell 재사용을 위한 List
-        List(list) { item in
-            StockRankRow(stockModel: item)
+        List($list) { $item in
+            StockRankRow(stockModel: $item)
                 .listRowInsets(EdgeInsets(.zero))
                 .listSectionSeparator(.hidden)
                 .frame(height: 80)
