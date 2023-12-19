@@ -12,28 +12,34 @@ struct StockRankView: View {
     @State var list = StockModel.list
     
     var body: some View {
-        
-        // Cell 재사용을 위한 List
-        List($list) { $item in
-            StockRankRow(stockModel: $item)
+        NavigationView {
+            // Cell 재사용을 위한 List
+            List($list) { $item in
+                
+                // 디자인적으로 Custom한 셀들을 Navigiation View에 적용하기 위한 방법
+                ZStack {
+                    NavigationLink {
+                        StockDetailView(stock: $item)
+                    } label: {
+                        EmptyView()
+                    }
+                    StockRankRow(stockModel: $item)
+                        .listRowInsets(EdgeInsets(.zero))
+                        .listSectionSeparator(.hidden)
+                        .frame(height: 80)
+                }
                 .listRowInsets(EdgeInsets(.zero))
-                .listSectionSeparator(.hidden)
                 .frame(height: 80)
+            }
+            .listStyle(.plain)
+            .navigationTitle("Stock Rank")
         }
-        .listStyle(.plain)
-        .background(.black)
-        
-        // ScollView는 Cell 재사용 X
-//        ScrollView {
-//            ForEach(list, id: \.self) { stock in
-//                StockRankRow(stockModel: stock)
-//            }
-//        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         StockRankView()
+             .preferredColorScheme(.dark)
     }
 }
