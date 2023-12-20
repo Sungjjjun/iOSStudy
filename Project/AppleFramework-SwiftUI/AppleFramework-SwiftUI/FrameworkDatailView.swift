@@ -8,29 +8,34 @@
 import SwiftUI
 
 struct FrameworkDatailView: View {
-    @Binding var framework: AppleFramework
+    @Binding var framework: AppleFramework?
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
         VStack(spacing: 30){
-            Image(framework.imageName)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 120, height: 120)
-            Text(framework.name)
-                .font(.system(size: 30, weight: .bold))
-            Text(framework.description)
-                .font(.system(size: 18))
-                .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 20))
-            Button {
-                
-            } label: {
-                Text("Learn More")
-                    .font(.system(size: 20, weight: .bold))
-                    .foregroundColor(.white)
+            if let framework = framework {
+                Image(framework.imageName)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 120, height: 120)
+                Text(framework.name)
+                    .font(.system(size: 30, weight: .bold))
+                Text(framework.description)
+                    .font(.system(size: 18))
+                    .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 20))
+                Button {
+                    presentationMode.wrappedValue.dismiss()
+                } label: {
+                    Text("Learn More")
+                        .font(.system(size: 20, weight: .bold))
+                        .foregroundColor(.white)
+                }
+                .frame(maxWidth: .infinity, minHeight: 80)
+                .background(.pink)
+                .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+            } else {
+                Text("Noting to selct")
             }
-            .frame(maxWidth: .infinity, minHeight: 80)
-            .background(.pink)
-            .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
         }
     }
 }
