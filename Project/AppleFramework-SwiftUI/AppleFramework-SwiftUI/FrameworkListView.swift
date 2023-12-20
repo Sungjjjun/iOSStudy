@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FrameworkListView: View {
     var body: some View {
-        @State var list: [AppleFramework] = AppleFramework.list
+        @StateObject var viewModel = FrameworkListViewModel()
         
         let layout: [GridItem] = [
             // Flexible => 화면 크기에 비례하여 아이템 크기 조절
@@ -27,13 +27,16 @@ struct FrameworkListView: View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: layout) {
-                    ForEach(list) { item in
-                        FrameworkCell(framework: item)
+                    ForEach($viewModel.models) { $item in
+                        FrameworkCell(framework: $item)
                     }
                 }
                 .padding([.top, .leading, .trailing], 16.0)
             }
             .navigationTitle("🌼Apple Framework")
+        }
+        .sheet(isPresented: $viewModel.isShowingDetail) {
+            EmptyView()
         }
     }
 }
@@ -41,5 +44,6 @@ struct FrameworkListView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         FrameworkListView()
+            .preferredColorScheme(.dark)
     }
 }
