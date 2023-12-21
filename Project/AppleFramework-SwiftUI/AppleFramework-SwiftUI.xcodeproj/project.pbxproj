@@ -19,6 +19,7 @@
 		CA68BC9D2B32D114000FDB8F /* FrameworkDatailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA68BC9C2B32D114000FDB8F /* FrameworkDatailView.swift */; };
 		CA68BC9F2B32D454000FDB8F /* FrameworkListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA68BC9E2B32D454000FDB8F /* FrameworkListViewModel.swift */; };
 		CA68BCA12B33D959000FDB8F /* FrameworkDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA68BCA02B33D959000FDB8F /* FrameworkDetailViewModel.swift */; };
+		CA68BCA32B33F11E000FDB8F /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA68BCA22B33F11E000FDB8F /* SafariView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		CA68BC9C2B32D114000FDB8F /* FrameworkDatailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDatailView.swift; sourceTree = "<group>"; };
 		CA68BC9E2B32D454000FDB8F /* FrameworkListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkListViewModel.swift; sourceTree = "<group>"; };
 		CA68BCA02B33D959000FDB8F /* FrameworkDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailViewModel.swift; sourceTree = "<group>"; };
+		CA68BCA22B33F11E000FDB8F /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				9486F0E1283883B30069AEB0 /* AppleFramework_SwiftUIApp.swift */,
 				9486F0E3283883B30069AEB0 /* FrameworkListView.swift */,
+				CA68BCA22B33F11E000FDB8F /* SafariView.swift */,
 				CA68BC9E2B32D454000FDB8F /* FrameworkListViewModel.swift */,
 				CA68BC9C2B32D114000FDB8F /* FrameworkDatailView.swift */,
 				CA68BCA02B33D959000FDB8F /* FrameworkDetailViewModel.swift */,
@@ -276,6 +279,7 @@
 				CA68BC9D2B32D114000FDB8F /* FrameworkDatailView.swift in Sources */,
 				CA68BCA12B33D959000FDB8F /* FrameworkDetailViewModel.swift in Sources */,
 				9486F0E4283883B30069AEB0 /* FrameworkListView.swift in Sources */,
+				CA68BCA32B33F11E000FDB8F /* SafariView.swift in Sources */,
 				9486F10C283883D60069AEB0 /* FramewokData.swift in Sources */,
 				9486F0E2283883B30069AEB0 /* AppleFramework_SwiftUIApp.swift in Sources */,
 				CA68BC9F2B32D454000FDB8F /* FrameworkListViewModel.swift in Sources */,

@@ -23,7 +23,8 @@ struct FrameworkDatailView: View {
                 .font(.system(size: 18))
             Spacer()
             Button {
-                print("Safari 띄우기")
+                viewModel.isSafariViewPresented = true
+                    
             } label: {
                 Text("Learn More")
                     .font(.system(size: 20, weight: .bold))
@@ -34,12 +35,15 @@ struct FrameworkDatailView: View {
             .cornerRadius(40)
         }
         .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+        .fullScreenCover(isPresented: $viewModel.isSafariViewPresented) {
+            let url = URL(string: viewModel.framework.urlString)!
+            SafariView(url: url)
+        }
     }
 }
 
 struct FrameworkDatailView_Previews: PreviewProvider {
     static var previews: some View {
         FrameworkDatailView(viewModel: FrameworkDetailViewModel(framework: AppleFramework.list[1]))
-            .preferredColorScheme(.dark)
     }
 }
