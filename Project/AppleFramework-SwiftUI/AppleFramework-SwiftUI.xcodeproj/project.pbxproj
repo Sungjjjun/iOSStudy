@@ -18,6 +18,7 @@
 		CA68BC8F2B30538F000FDB8F /* FrameworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA68BC8E2B30538F000FDB8F /* FrameworkCell.swift */; };
 		CA68BC9D2B32D114000FDB8F /* FrameworkDatailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA68BC9C2B32D114000FDB8F /* FrameworkDatailView.swift */; };
 		CA68BC9F2B32D454000FDB8F /* FrameworkListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA68BC9E2B32D454000FDB8F /* FrameworkListViewModel.swift */; };
+		CA68BCA12B33D959000FDB8F /* FrameworkDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA68BCA02B33D959000FDB8F /* FrameworkDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		CA68BC8E2B30538F000FDB8F /* FrameworkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkCell.swift; sourceTree = "<group>"; };
 		CA68BC9C2B32D114000FDB8F /* FrameworkDatailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDatailView.swift; sourceTree = "<group>"; };
 		CA68BC9E2B32D454000FDB8F /* FrameworkListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkListViewModel.swift; sourceTree = "<group>"; };
+		CA68BCA02B33D959000FDB8F /* FrameworkDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				9486F0E3283883B30069AEB0 /* FrameworkListView.swift */,
 				CA68BC9E2B32D454000FDB8F /* FrameworkListViewModel.swift */,
 				CA68BC9C2B32D114000FDB8F /* FrameworkDatailView.swift */,
+				CA68BCA02B33D959000FDB8F /* FrameworkDetailViewModel.swift */,
 				9486F10B283883D60069AEB0 /* FramewokData.swift */,
 				CA68BC8E2B30538F000FDB8F /* FrameworkCell.swift */,
 				9486F0E5283883B40069AEB0 /* Assets.xcassets */,
@@ -271,6 +274,7 @@
 			files = (
 				CA68BC8F2B30538F000FDB8F /* FrameworkCell.swift in Sources */,
 				CA68BC9D2B32D114000FDB8F /* FrameworkDatailView.swift in Sources */,
+				CA68BCA12B33D959000FDB8F /* FrameworkDetailViewModel.swift in Sources */,
 				9486F0E4283883B30069AEB0 /* FrameworkListView.swift in Sources */,
 				9486F10C283883D60069AEB0 /* FramewokData.swift in Sources */,
 				9486F0E2283883B30069AEB0 /* AppleFramework_SwiftUIApp.swift in Sources */,

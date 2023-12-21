@@ -38,11 +38,10 @@ struct FrameworkListView: View {
             }
             .navigationTitle("🌼Apple Framework")
         }
-//        .sheet(isPresented: $vm.isShowingDetail) {
-//            FrameworkDatailView(framework: $vm.selectedItem)
-//        }
-        .fullScreenCover(isPresented: $vm.isShowingDetail) {
-            FrameworkDatailView(framework: $vm.selectedItem)
+        .sheet(isPresented: $vm.isShowingDetail) {
+        // .fullScreenCover(isPresented: $vm.isShowingDetail) {
+            let viewModel = FrameworkDetailViewModel(framework: vm.selectedItem!)
+            FrameworkDatailView(viewModel: viewModel)
         }
     }
 }
