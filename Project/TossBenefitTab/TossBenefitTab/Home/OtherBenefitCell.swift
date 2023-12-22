@@ -9,4 +9,7 @@ import UIKit
 
 class OtherBenefitCell: UICollectionViewCell {
     
+    func configure(item: Benefit) {
+        
+    }
 }
