@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  TossBenefitTab
-//
-//  Created by joonwon lee on 2022/06/18.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {

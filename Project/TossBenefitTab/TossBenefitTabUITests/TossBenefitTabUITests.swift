@@ -1,10 +1,3 @@
-//
-//  TossBenefitTabUITests.swift
-//  TossBenefitTabUITests
-//
-//  Created by joonwon lee on 2022/06/18.
-//
-
 import XCTest
 
 class TossBenefitTabUITests: XCTestCase {

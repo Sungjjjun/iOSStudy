@@ -1,10 +1,3 @@
-//
-//  TossBenefitTabTests.swift
-//  TossBenefitTabTests
-//
-//  Created by joonwon lee on 2022/06/18.
-//
-
 import XCTest
 @testable import TossBenefitTab
 

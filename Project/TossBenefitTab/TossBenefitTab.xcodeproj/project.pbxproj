@@ -15,6 +15,7 @@
 		94BD336D285D5CA1008DA3B7 /* TossBenefitTabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BD336C285D5CA1008DA3B7 /* TossBenefitTabTests.swift */; };
 		94BD3377285D5CA1008DA3B7 /* TossBenefitTabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BD3376285D5CA1008DA3B7 /* TossBenefitTabUITests.swift */; };
 		94BD3379285D5CA1008DA3B7 /* TossBenefitTabUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BD3378285D5CA1008DA3B7 /* TossBenefitTabUITestsLaunchTests.swift */; };
+		CAC21B0F2B358DF5006D6307 /* BenefitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B0E2B358DF5006D6307 /* BenefitListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		94BD3372285D5CA1008DA3B7 /* TossBenefitTabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TossBenefitTabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94BD3376285D5CA1008DA3B7 /* TossBenefitTabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TossBenefitTabUITests.swift; sourceTree = "<group>"; };
 		94BD3378285D5CA1008DA3B7 /* TossBenefitTabUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TossBenefitTabUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CAC21B0E2B358DF5006D6307 /* BenefitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				94BD3355285D5C9E008DA3B7 /* AppDelegate.swift */,
 				94BD3357285D5C9E008DA3B7 /* SceneDelegate.swift */,
 				94BD335B285D5C9E008DA3B7 /* Main.storyboard */,
+				CAC21B0E2B358DF5006D6307 /* BenefitListViewController.swift */,
 				94BD335E285D5CA1008DA3B7 /* Assets.xcassets */,
 				94BD3360285D5CA1008DA3B7 /* LaunchScreen.storyboard */,
 				94BD3363285D5CA1008DA3B7 /* Info.plist */,
@@ -255,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAC21B0F2B358DF5006D6307 /* BenefitListViewController.swift in Sources */,
 				94BD3356285D5C9E008DA3B7 /* AppDelegate.swift in Sources */,
 				94BD3358285D5C9E008DA3B7 /* SceneDelegate.swift in Sources */,
 			);
