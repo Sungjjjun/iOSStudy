@@ -43,11 +43,22 @@ class BenefitListViewController: UIViewController {
         
         // Layout
         collectionView.collectionViewLayout = layout()
+        collectionView.delegate = self
         navigationItem.title = "헤택"
     }
     
     private func layout() -> UICollectionViewCompositionalLayout {
-        let layout = UICollectionViewCompositionalLayout()
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(60))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(60))
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 10, bottom: 0, trailing: 10)
+        section.interGroupSpacing = 20
+        
+        let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
     }
     
@@ -80,5 +91,12 @@ class BenefitListViewController: UIViewController {
                 return nil
             }
         }
+    }
+}
+
+extension BenefitListViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let item = dataSource.itemIdentifier(for: indexPath)
+        print("\(item)")
     }
 }
