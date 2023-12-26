@@ -97,10 +97,12 @@ class BenefitListViewController: UIViewController {
 extension BenefitListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let item = dataSource.itemIdentifier(for: indexPath)
-        print("\(item)")
         
         if let benefit = item as? Benefit {
-            
+            let buttonBenefitStoryBoard = UIStoryboard(name: "ButtonBenefit", bundle: nil)
+            let buttonBenefitViewController = buttonBenefitStoryBoard.instantiateViewController(withIdentifier: "ButtonBenefitViewController") as! ButtonBenefitViewController
+            buttonBenefitViewController.benefit = benefit
+            navigationController?.pushViewController(buttonBenefitViewController, animated: true)
         } else if let point = item as? MyPoint {
             let myPointStoryBoard = UIStoryboard(name: "MyPoint", bundle: nil)
             let myPointViewController = myPointStoryBoard.instantiateViewController(withIdentifier: "MyPointViewController") as! MyPointViewController
