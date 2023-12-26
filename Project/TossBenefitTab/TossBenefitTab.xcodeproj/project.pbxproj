@@ -22,6 +22,8 @@
 		CAC21B192B35D8B1006D6307 /* TodayBenefitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B182B35D8B1006D6307 /* TodayBenefitCell.swift */; };
 		CAC21B1B2B35D8C6006D6307 /* OtherBenefitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B1A2B35D8C6006D6307 /* OtherBenefitCell.swift */; };
 		CAC21B1D2B35DBA1006D6307 /* TodaySectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B1C2B35DBA1006D6307 /* TodaySectionItem.swift */; };
+		CAC21B1F2B3AD44A006D6307 /* MyPoint.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAC21B1E2B3AD44A006D6307 /* MyPoint.storyboard */; };
+		CAC21B212B3AD460006D6307 /* MyPointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B202B3AD460006D6307 /* MyPointViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		CAC21B182B35D8B1006D6307 /* TodayBenefitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayBenefitCell.swift; sourceTree = "<group>"; };
 		CAC21B1A2B35D8C6006D6307 /* OtherBenefitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherBenefitCell.swift; sourceTree = "<group>"; };
 		CAC21B1C2B35DBA1006D6307 /* TodaySectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaySectionItem.swift; sourceTree = "<group>"; };
+		CAC21B1E2B3AD44A006D6307 /* MyPoint.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPoint.storyboard; sourceTree = "<group>"; };
+		CAC21B202B3AD460006D6307 /* MyPointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPointViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,7 @@
 			children = (
 				94BD3355285D5C9E008DA3B7 /* AppDelegate.swift */,
 				94BD3357285D5C9E008DA3B7 /* SceneDelegate.swift */,
+				CAC21B222B3AD495006D6307 /* MyPoint */,
 				CAC21B152B35D6E4006D6307 /* Home */,
 				CAC21B142B35D6D4006D6307 /* Model */,
 				94BD335E285D5CA1008DA3B7 /* Assets.xcassets */,
@@ -159,6 +164,15 @@
 				CAC21B1A2B35D8C6006D6307 /* OtherBenefitCell.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		CAC21B222B3AD495006D6307 /* MyPoint */ = {
+			isa = PBXGroup;
+			children = (
+				CAC21B1E2B3AD44A006D6307 /* MyPoint.storyboard */,
+				CAC21B202B3AD460006D6307 /* MyPointViewController.swift */,
+			);
+			path = MyPoint;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94BD3362285D5CA1008DA3B7 /* LaunchScreen.storyboard in Resources */,
+				CAC21B1F2B3AD44A006D6307 /* MyPoint.storyboard in Resources */,
 				94BD335F285D5CA1008DA3B7 /* Assets.xcassets in Resources */,
 				94BD335D285D5C9E008DA3B7 /* Main.storyboard in Resources */,
 			);
@@ -301,6 +316,7 @@
 				94BD3356285D5C9E008DA3B7 /* AppDelegate.swift in Sources */,
 				CAC21B172B35D89B006D6307 /* MyPointCell.swift in Sources */,
 				94BD3358285D5C9E008DA3B7 /* SceneDelegate.swift in Sources */,
+				CAC21B212B3AD460006D6307 /* MyPointViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
