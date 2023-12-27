@@ -28,6 +28,9 @@
 		CAC21B262B3AFDC6006D6307 /* ButtonBenefitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B252B3AFDC6006D6307 /* ButtonBenefitViewController.swift */; };
 		CAC21B292B3B0123006D6307 /* BenefitDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B282B3B0123006D6307 /* BenefitDetails.swift */; };
 		CAC21B2B2B3BF84B006D6307 /* BenefitGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B2A2B3BF84B006D6307 /* BenefitGuideView.swift */; };
+		CAC21B2D2B3C053B006D6307 /* BenefitListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B2C2B3C053B006D6307 /* BenefitListViewModel.swift */; };
+		CAC21B2F2B3C07F0006D6307 /* MyPointViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B2E2B3C07F0006D6307 /* MyPointViewModel.swift */; };
+		CAC21B312B3C0955006D6307 /* ButtonBenefitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B302B3C0955006D6307 /* ButtonBenefitViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,9 @@
 		CAC21B252B3AFDC6006D6307 /* ButtonBenefitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBenefitViewController.swift; sourceTree = "<group>"; };
 		CAC21B282B3B0123006D6307 /* BenefitDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitDetails.swift; sourceTree = "<group>"; };
 		CAC21B2A2B3BF84B006D6307 /* BenefitGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitGuideView.swift; sourceTree = "<group>"; };
+		CAC21B2C2B3C053B006D6307 /* BenefitListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitListViewModel.swift; sourceTree = "<group>"; };
+		CAC21B2E2B3C07F0006D6307 /* MyPointViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPointViewModel.swift; sourceTree = "<group>"; };
+		CAC21B302B3C0955006D6307 /* ButtonBenefitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBenefitViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +178,7 @@
 				CAC21B162B35D89B006D6307 /* MyPointCell.swift */,
 				CAC21B182B35D8B1006D6307 /* TodayBenefitCell.swift */,
 				CAC21B1A2B35D8C6006D6307 /* OtherBenefitCell.swift */,
+				CAC21B2C2B3C053B006D6307 /* BenefitListViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -181,6 +188,7 @@
 			children = (
 				CAC21B1E2B3AD44A006D6307 /* MyPoint.storyboard */,
 				CAC21B202B3AD460006D6307 /* MyPointViewController.swift */,
+				CAC21B2E2B3C07F0006D6307 /* MyPointViewModel.swift */,
 			);
 			path = MyPoint;
 			sourceTree = "<group>";
@@ -191,6 +199,7 @@
 				CAC21B232B3AFDBB006D6307 /* ButtonBenefit.storyboard */,
 				CAC21B252B3AFDC6006D6307 /* ButtonBenefitViewController.swift */,
 				CAC21B2A2B3BF84B006D6307 /* BenefitGuideView.swift */,
+				CAC21B302B3C0955006D6307 /* ButtonBenefitViewModel.swift */,
 			);
 			path = ButtonBenefit;
 			sourceTree = "<group>";
@@ -336,8 +345,11 @@
 				CAC21B192B35D8B1006D6307 /* TodayBenefitCell.swift in Sources */,
 				CAC21B262B3AFDC6006D6307 /* ButtonBenefitViewController.swift in Sources */,
 				94BD3356285D5C9E008DA3B7 /* AppDelegate.swift in Sources */,
+				CAC21B2D2B3C053B006D6307 /* BenefitListViewModel.swift in Sources */,
 				CAC21B172B35D89B006D6307 /* MyPointCell.swift in Sources */,
+				CAC21B2F2B3C07F0006D6307 /* MyPointViewModel.swift in Sources */,
 				94BD3358285D5C9E008DA3B7 /* SceneDelegate.swift in Sources */,
+				CAC21B312B3C0955006D6307 /* ButtonBenefitViewModel.swift in Sources */,
 				CAC21B292B3B0123006D6307 /* BenefitDetails.swift in Sources */,
 				CAC21B212B3AD460006D6307 /* MyPointViewController.swift in Sources */,
 				CAC21B2B2B3BF84B006D6307 /* BenefitGuideView.swift in Sources */,
