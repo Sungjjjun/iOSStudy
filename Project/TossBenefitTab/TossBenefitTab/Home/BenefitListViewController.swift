@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 // 3가지 Cell로 구성
 //  1. 나의 포인트 보기 => Today
@@ -21,12 +22,62 @@ class BenefitListViewController: UIViewController {
     typealias Item = AnyHashable
     
     var dataSource: UICollectionViewDiffableDataSource<Section, Item>!
-    var todaySectionItems: [AnyHashable] = TodaySectionItem(point: .default, today: .today).sectionItems
-    var otherSectionItems: [AnyHashable] = Benefit.others
+    
+    @Published var todaySectionItems: [AnyHashable] = []
+    @Published var otherSectionItems: [AnyHashable] = []
+    
+    var subscriptions = Set<AnyCancellable>()
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Network를 통해 데이터를 받는 상황을 구현
+        // TodaySectionItem은 약 0.5초의 Delay
+        // OtherSectionItems은 약 2.5초의 Delay
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.todaySectionItems = TodaySectionItem(point: .default, today: .today).sectionItems
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+            self.otherSectionItems = Benefit.others
+        }
+    }
+    
+    private func bind() {
+        $todaySectionItems
+            .receive(on: RunLoop.main)
+            .sink { items in
+                self.applySnapshot(items: items, section: .today)
+            }
+            .store(in: &subscriptions)
+        
+        $otherSectionItems
+            .receive(on: RunLoop.main)
+            .sink { items in
+                self.applySnapshot(items: items, section: .other)
+            }
+            .store(in: &subscriptions)
+    }
+    
+    // 네트워크를 통해 받은 데이터를 Snapshot에 적용해주는 함수
+    private func applySnapshot(items: [Item], section: Section) {
+        var snapshot = dataSource.snapshot()
+        snapshot.appendItems(items, toSection: section)
+        dataSource.apply(snapshot)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupUI()
+        configureCollectionView()
+        bind()
+    }
+    
+    private func setupUI() {
+        navigationItem.title = "헤택"
+    }
+    
+    private func configureCollectionView() {
         // Presentation
         dataSource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: collectionView, cellProvider: { collectionView, indexPath, item in
             guard let section = Section(rawValue: indexPath.section) else { return nil }
@@ -44,7 +95,6 @@ class BenefitListViewController: UIViewController {
         // Layout
         collectionView.collectionViewLayout = layout()
         collectionView.delegate = self
-        navigationItem.title = "헤택"
     }
     
     private func layout() -> UICollectionViewCompositionalLayout {
