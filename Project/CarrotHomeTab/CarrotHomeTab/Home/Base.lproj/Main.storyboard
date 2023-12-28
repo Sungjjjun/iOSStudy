@@ -96,7 +96,7 @@
         <!--동네 생활-->
         <scene sceneID="CGx-zo-ks5">
             <objects>
-                <viewController id="he0-YT-a6L" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyTownViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="he0-YT-a6L" customClass="MyTownViewController" customModule="CarrotHomeTab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TEu-8I-fvh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,14 +128,14 @@
         <!--채팅-->
         <scene sceneID="kn3-hw-ebj">
             <objects>
-                <viewController id="V8n-Wp-DCI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V8n-Wp-DCI" customClass="ChatViewController" customModule="CarrotHomeTab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0zL-GM-9z1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="zUs-SO-5xe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="채팅" image="rectangle.3.offgrid.bubble.left" catalog="system" id="CZb-pi-TNG"/>
+                    <tabBarItem key="tabBarItem" title="채팅" image="rectangle.3.group.bubble.left" catalog="system" id="CZb-pi-TNG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m0q-wm-Ipp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -144,7 +144,7 @@
         <!--나의 당근-->
         <scene sceneID="RAK-Ix-heW">
             <objects>
-                <viewController id="isb-XY-uBw" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="isb-XY-uBw" customClass="MyProfileViewController" customModule="CarrotHomeTab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MMA-Sl-Boy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -163,7 +163,7 @@
         <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="mappin.and.ellipse" catalog="system" width="117" height="128"/>
         <image name="person" catalog="system" width="128" height="121"/>
-        <image name="rectangle.3.offgrid.bubble.left" catalog="system" width="128" height="110"/>
+        <image name="rectangle.3.group.bubble.left" catalog="system" width="128" height="110"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

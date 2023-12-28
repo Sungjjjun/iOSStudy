@@ -24,6 +24,9 @@
 		CAC21B382B3D551F006D6307 /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B372B3D551F006D6307 /* MainNavigationViewController.swift */; };
 		CAC21B3A2B3D5568006D6307 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B392B3D5568006D6307 /* MainTabBarController.swift */; };
 		CAC21B3C2B3D55DB006D6307 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAC21B3B2B3D55DB006D6307 /* Detail.storyboard */; };
+		CAC21B422B3D6125006D6307 /* MyTownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B412B3D6125006D6307 /* MyTownViewController.swift */; };
+		CAC21B462B3D6187006D6307 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B452B3D6187006D6307 /* MyProfileViewController.swift */; };
+		CAC21B482B3D6190006D6307 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B472B3D6190006D6307 /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,9 @@
 		CAC21B372B3D551F006D6307 /* MainNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
 		CAC21B392B3D5568006D6307 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		CAC21B3B2B3D55DB006D6307 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		CAC21B412B3D6125006D6307 /* MyTownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTownViewController.swift; sourceTree = "<group>"; };
+		CAC21B452B3D6187006D6307 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		CAC21B472B3D6190006D6307 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +148,9 @@
 			children = (
 				94BB227D28669A15004FC34D /* AppDelegate.swift */,
 				94BB227F28669A15004FC34D /* SceneDelegate.swift */,
+				CAC21B412B3D6125006D6307 /* MyTownViewController.swift */,
+				CAC21B452B3D6187006D6307 /* MyProfileViewController.swift */,
+				CAC21B472B3D6190006D6307 /* ChatViewController.swift */,
 				CAC21B3F2B3D5DA1006D6307 /* Home */,
 				CAC21B402B3D5DAB006D6307 /* Detail */,
 				9402EE1528673FB100D33FDD /* Utils */,
@@ -327,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAC21B462B3D6187006D6307 /* MyProfileViewController.swift in Sources */,
 				94BB227E28669A15004FC34D /* AppDelegate.swift in Sources */,
 				CAC21B382B3D551F006D6307 /* MainNavigationViewController.swift in Sources */,
 				CAC21B3A2B3D5568006D6307 /* MainTabBarController.swift in Sources */,
@@ -335,6 +345,8 @@
 				9402EE1728673FB100D33FDD /* Publisher+Utils.swift in Sources */,
 				9402EE1128673D9C00D33FDD /* NetworkService.swift in Sources */,
 				CAC21B332B3D5467006D6307 /* HomeViewController.swift in Sources */,
+				CAC21B482B3D6190006D6307 /* ChatViewController.swift in Sources */,
+				CAC21B422B3D6125006D6307 /* MyTownViewController.swift in Sources */,
 				9402EE1228673D9C00D33FDD /* Resource.swift in Sources */,
 				CAC21B362B3D54CD006D6307 /* DetailViewController.swift in Sources */,
 			);
