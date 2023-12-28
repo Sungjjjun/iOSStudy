@@ -142,12 +142,8 @@
 			children = (
 				94BB227D28669A15004FC34D /* AppDelegate.swift */,
 				94BB227F28669A15004FC34D /* SceneDelegate.swift */,
-				CAC21B372B3D551F006D6307 /* MainNavigationViewController.swift */,
-				CAC21B392B3D5568006D6307 /* MainTabBarController.swift */,
-				94A38E57286830EA000691E1 /* Main.storyboard */,
-				CAC21B322B3D5467006D6307 /* HomeViewController.swift */,
-				CAC21B352B3D54CD006D6307 /* DetailViewController.swift */,
-				CAC21B3B2B3D55DB006D6307 /* Detail.storyboard */,
+				CAC21B3F2B3D5DA1006D6307 /* Home */,
+				CAC21B402B3D5DAB006D6307 /* Detail */,
 				9402EE1528673FB100D33FDD /* Utils */,
 				9402EE0E28673D9C00D33FDD /* Network */,
 				94A38E4B2868307C000691E1 /* Model */,
@@ -173,6 +169,26 @@
 				94BB22A028669A17004FC34D /* CarrotHomeTabUITestsLaunchTests.swift */,
 			);
 			path = CarrotHomeTabUITests;
+			sourceTree = "<group>";
+		};
+		CAC21B3F2B3D5DA1006D6307 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CAC21B372B3D551F006D6307 /* MainNavigationViewController.swift */,
+				CAC21B392B3D5568006D6307 /* MainTabBarController.swift */,
+				94A38E57286830EA000691E1 /* Main.storyboard */,
+				CAC21B322B3D5467006D6307 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CAC21B402B3D5DAB006D6307 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				CAC21B352B3D54CD006D6307 /* DetailViewController.swift */,
+				CAC21B3B2B3D55DB006D6307 /* Detail.storyboard */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

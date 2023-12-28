@@ -35,8 +35,10 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="uZh-CC-lY8"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MDx-dU-2Pz">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="labelColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="kiz-pv-WGW" kind="relationship" relationship="viewControllers" id="81C-kM-Zua"/>
@@ -50,7 +52,7 @@
             </objects>
             <point key="canvasLocation" x="253.62318840579712" y="279.91071428571428"/>
         </scene>
-        <!--Item-->
+        <!--홈-->
         <scene sceneID="HAK-3j-zz1">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kiz-pv-WGW" customClass="HomeViewController" customModule="CarrotHomeTab" customModuleProvider="target" sceneMemberID="viewController">
@@ -84,14 +86,14 @@
                             <constraint firstItem="9Rt-1S-r7x" firstAttribute="centerX" secondItem="IFj-bq-OMM" secondAttribute="centerX" id="tRa-ZS-gFl"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="ogX-cD-LbM"/>
+                    <tabBarItem key="tabBarItem" title="홈" image="homekit" catalog="system" id="ogX-cD-LbM"/>
                     <navigationItem key="navigationItem" id="hJb-rC-gTo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CEc-9Y-mxR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1659" y="1004"/>
         </scene>
-        <!--Item-->
+        <!--동네 생활-->
         <scene sceneID="CGx-zo-ks5">
             <objects>
                 <viewController id="he0-YT-a6L" sceneMemberID="viewController">
@@ -101,13 +103,13 @@
                         <viewLayoutGuide key="safeArea" id="RNa-VX-lHN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="UKq-a5-bGz"/>
+                    <tabBarItem key="tabBarItem" title="동네 생활" image="doc" catalog="system" id="UKq-a5-bGz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rce-cb-HcK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-749" y="1004"/>
         </scene>
-        <!--Item-->
+        <!--내 근처-->
         <scene sceneID="PMX-Tv-DE5">
             <objects>
                 <viewController id="OrR-qw-jQJ" sceneMemberID="viewController">
@@ -117,13 +119,13 @@
                         <viewLayoutGuide key="safeArea" id="rFT-rX-ypE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="MIp-qr-Jsj"/>
+                    <tabBarItem key="tabBarItem" title="내 근처" image="mappin.and.ellipse" catalog="system" id="MIp-qr-Jsj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Td5-oG-Ord" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="254" y="1004"/>
         </scene>
-        <!--Item-->
+        <!--채팅-->
         <scene sceneID="kn3-hw-ebj">
             <objects>
                 <viewController id="V8n-Wp-DCI" sceneMemberID="viewController">
@@ -133,13 +135,13 @@
                         <viewLayoutGuide key="safeArea" id="zUs-SO-5xe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="CZb-pi-TNG"/>
+                    <tabBarItem key="tabBarItem" title="채팅" image="rectangle.3.offgrid.bubble.left" catalog="system" id="CZb-pi-TNG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m0q-wm-Ipp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1258" y="1004"/>
         </scene>
-        <!--Item-->
+        <!--나의 당근-->
         <scene sceneID="RAK-Ix-heW">
             <objects>
                 <viewController id="isb-XY-uBw" sceneMemberID="viewController">
@@ -149,7 +151,7 @@
                         <viewLayoutGuide key="safeArea" id="t6H-5Z-PmP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="h1D-SK-RLr"/>
+                    <tabBarItem key="tabBarItem" title="나의 당근" image="person" catalog="system" id="h1D-SK-RLr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jIz-di-ziv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,6 +159,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="doc" catalog="system" width="115" height="128"/>
+        <image name="homekit" catalog="system" width="128" height="104"/>
+        <image name="mappin.and.ellipse" catalog="system" width="117" height="128"/>
+        <image name="person" catalog="system" width="128" height="121"/>
+        <image name="rectangle.3.offgrid.bubble.left" catalog="system" width="128" height="110"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
