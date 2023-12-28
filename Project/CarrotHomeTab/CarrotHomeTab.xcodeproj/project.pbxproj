@@ -19,6 +19,11 @@
 		94BB229528669A17004FC34D /* CarrotHomeTabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB229428669A17004FC34D /* CarrotHomeTabTests.swift */; };
 		94BB229F28669A17004FC34D /* CarrotHomeTabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB229E28669A17004FC34D /* CarrotHomeTabUITests.swift */; };
 		94BB22A128669A17004FC34D /* CarrotHomeTabUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BB22A028669A17004FC34D /* CarrotHomeTabUITestsLaunchTests.swift */; };
+		CAC21B332B3D5467006D6307 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B322B3D5467006D6307 /* HomeViewController.swift */; };
+		CAC21B362B3D54CD006D6307 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B352B3D54CD006D6307 /* DetailViewController.swift */; };
+		CAC21B382B3D551F006D6307 /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B372B3D551F006D6307 /* MainNavigationViewController.swift */; };
+		CAC21B3A2B3D5568006D6307 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B392B3D5568006D6307 /* MainTabBarController.swift */; };
+		CAC21B3C2B3D55DB006D6307 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAC21B3B2B3D55DB006D6307 /* Detail.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +60,11 @@
 		94BB229A28669A17004FC34D /* CarrotHomeTabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarrotHomeTabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94BB229E28669A17004FC34D /* CarrotHomeTabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotHomeTabUITests.swift; sourceTree = "<group>"; };
 		94BB22A028669A17004FC34D /* CarrotHomeTabUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotHomeTabUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CAC21B322B3D5467006D6307 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CAC21B352B3D54CD006D6307 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CAC21B372B3D551F006D6307 /* MainNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
+		CAC21B392B3D5568006D6307 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		CAC21B3B2B3D55DB006D6307 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +142,12 @@
 			children = (
 				94BB227D28669A15004FC34D /* AppDelegate.swift */,
 				94BB227F28669A15004FC34D /* SceneDelegate.swift */,
+				CAC21B372B3D551F006D6307 /* MainNavigationViewController.swift */,
+				CAC21B392B3D5568006D6307 /* MainTabBarController.swift */,
 				94A38E57286830EA000691E1 /* Main.storyboard */,
+				CAC21B322B3D5467006D6307 /* HomeViewController.swift */,
+				CAC21B352B3D54CD006D6307 /* DetailViewController.swift */,
+				CAC21B3B2B3D55DB006D6307 /* Detail.storyboard */,
 				9402EE1528673FB100D33FDD /* Utils */,
 				9402EE0E28673D9C00D33FDD /* Network */,
 				94A38E4B2868307C000691E1 /* Model */,
@@ -271,6 +286,7 @@
 				94BB228A28669A16004FC34D /* LaunchScreen.storyboard in Resources */,
 				94A38E5C286830EA000691E1 /* Main.storyboard in Resources */,
 				94BB228728669A16004FC34D /* Assets.xcassets in Resources */,
+				CAC21B3C2B3D55DB006D6307 /* Detail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,11 +312,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				94BB227E28669A15004FC34D /* AppDelegate.swift in Sources */,
+				CAC21B382B3D551F006D6307 /* MainNavigationViewController.swift in Sources */,
+				CAC21B3A2B3D5568006D6307 /* MainTabBarController.swift in Sources */,
 				94A38E512868307C000691E1 /* ItemInfo.swift in Sources */,
 				94BB228028669A15004FC34D /* SceneDelegate.swift in Sources */,
 				9402EE1728673FB100D33FDD /* Publisher+Utils.swift in Sources */,
 				9402EE1128673D9C00D33FDD /* NetworkService.swift in Sources */,
+				CAC21B332B3D5467006D6307 /* HomeViewController.swift in Sources */,
 				9402EE1228673D9C00D33FDD /* Resource.swift in Sources */,
+				CAC21B362B3D54CD006D6307 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
