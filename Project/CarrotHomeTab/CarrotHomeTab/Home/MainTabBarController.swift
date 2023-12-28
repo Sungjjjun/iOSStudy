@@ -30,8 +30,13 @@ extension MainTabBarController: UITabBarControllerDelegate {
         
         switch viewController {
         case is HomeViewController:
-            let titleItem = UIBarButtonItem(title: "심곡동", style: .plain, target: nil, action: nil)
-            let feedItem = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
+            let titleConfig = CustomBarItemConfigure(title: "심곡동", handler: { })
+            let customTitleView = CustomBarItem(config: titleConfig)
+            let titleItem = UIBarButtonItem(customView: customTitleView)
+            
+            let feedConfig = CustomBarItemConfigure(image: UIImage(systemName: "magnifyingglass") ,handler: {})
+            let customFeedView = CustomBarItem(config: feedConfig)
+            let feedItem = UIBarButtonItem(customView: customFeedView)
             
             navigationItem.leftBarButtonItem = titleItem
             navigationItem.rightBarButtonItem = feedItem

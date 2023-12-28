@@ -27,6 +27,7 @@
 		CAC21B422B3D6125006D6307 /* MyTownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B412B3D6125006D6307 /* MyTownViewController.swift */; };
 		CAC21B462B3D6187006D6307 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B452B3D6187006D6307 /* MyProfileViewController.swift */; };
 		CAC21B482B3D6190006D6307 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B472B3D6190006D6307 /* ChatViewController.swift */; };
+		CAC21B4A2B3D64BA006D6307 /* CustomBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B492B3D64BA006D6307 /* CustomBarItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		CAC21B412B3D6125006D6307 /* MyTownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTownViewController.swift; sourceTree = "<group>"; };
 		CAC21B452B3D6187006D6307 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		CAC21B472B3D6190006D6307 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		CAC21B492B3D64BA006D6307 /* CustomBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				94BB227F28669A15004FC34D /* SceneDelegate.swift */,
 				CAC21B412B3D6125006D6307 /* MyTownViewController.swift */,
 				CAC21B452B3D6187006D6307 /* MyProfileViewController.swift */,
+				CAC21B492B3D64BA006D6307 /* CustomBarItem.swift */,
 				CAC21B472B3D6190006D6307 /* ChatViewController.swift */,
 				CAC21B3F2B3D5DA1006D6307 /* Home */,
 				CAC21B402B3D5DAB006D6307 /* Detail */,
@@ -344,6 +347,7 @@
 				94BB228028669A15004FC34D /* SceneDelegate.swift in Sources */,
 				9402EE1728673FB100D33FDD /* Publisher+Utils.swift in Sources */,
 				9402EE1128673D9C00D33FDD /* NetworkService.swift in Sources */,
+				CAC21B4A2B3D64BA006D6307 /* CustomBarItem.swift in Sources */,
 				CAC21B332B3D5467006D6307 /* HomeViewController.swift in Sources */,
 				CAC21B482B3D6190006D6307 /* ChatViewController.swift in Sources */,
 				CAC21B422B3D6125006D6307 /* MyTownViewController.swift in Sources */,
