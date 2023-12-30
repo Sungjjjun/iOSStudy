@@ -31,6 +31,8 @@
 		CAC21B4C2B3EF9ED006D6307 /* UIBarButtonItem+CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B4B2B3EF9ED006D6307 /* UIBarButtonItem+CustomView.swift */; };
 		CAC21B532B3FEF39006D6307 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAC21B522B3FEF39006D6307 /* Home.storyboard */; };
 		CAC21B552B3FEF77006D6307 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B542B3FEF77006D6307 /* HomeViewModel.swift */; };
+		CAC21B572B400DCD006D6307 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B562B400DCD006D6307 /* HomeViewCell.swift */; };
+		CAC21B5A2B401737006D6307 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CAC21B592B401737006D6307 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,7 @@
 		CAC21B4B2B3EF9ED006D6307 /* UIBarButtonItem+CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+CustomView.swift"; sourceTree = "<group>"; };
 		CAC21B522B3FEF39006D6307 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		CAC21B542B3FEF77006D6307 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		CAC21B562B400DCD006D6307 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAC21B5A2B401737006D6307 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +200,7 @@
 				CAC21B522B3FEF39006D6307 /* Home.storyboard */,
 				CAC21B322B3D5467006D6307 /* HomeViewController.swift */,
 				CAC21B542B3FEF77006D6307 /* HomeViewModel.swift */,
+				CAC21B562B400DCD006D6307 /* HomeViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -269,6 +274,7 @@
 			);
 			name = CarrotHomeTab;
 			packageProductDependencies = (
+				CAC21B592B401737006D6307 /* Kingfisher */,
 			);
 			productName = CarrotHomeTab;
 			productReference = 94BB227A28669A15004FC34D /* CarrotHomeTab.app */;
@@ -343,6 +349,7 @@
 			);
 			mainGroup = 94BB227128669A15004FC34D;
 			packageReferences = (
+				CAC21B582B401737006D6307 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 94BB227B28669A15004FC34D /* Products */;
 			projectDirPath = "";
@@ -403,6 +410,7 @@
 				CAC21B482B3D6190006D6307 /* ChatViewController.swift in Sources */,
 				CAC21B422B3D6125006D6307 /* MyTownViewController.swift in Sources */,
 				CAC21B4C2B3EF9ED006D6307 /* UIBarButtonItem+CustomView.swift in Sources */,
+				CAC21B572B400DCD006D6307 /* HomeViewCell.swift in Sources */,
 				9402EE1228673D9C00D33FDD /* Resource.swift in Sources */,
 				CAC21B362B3D54CD006D6307 /* DetailViewController.swift in Sources */,
 			);
@@ -746,6 +754,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CAC21B582B401737006D6307 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CAC21B592B401737006D6307 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CAC21B582B401737006D6307 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 94BB227228669A15004FC34D /* Project object */;
 }
