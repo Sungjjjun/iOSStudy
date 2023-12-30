@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -15,32 +16,8 @@
                     <view key="view" contentMode="scaleToFill" id="43w-er-CEd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWn-El-DuD">
-                                <rect key="frame" x="174.5" y="437.5" width="65" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Rt-1S-r7x">
-                                <rect key="frame" x="144" y="517.5" width="126.5" height="38"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Go to Detail">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="ctaButtonTapped:" destination="kiz-pv-WGW" eventType="touchUpInside" id="bYI-H1-fC1"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="IFj-bq-OMM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="9Rt-1S-r7x" firstAttribute="top" secondItem="GWn-El-DuD" secondAttribute="bottom" constant="50" id="k44-av-9pI"/>
-                            <constraint firstItem="GWn-El-DuD" firstAttribute="centerX" secondItem="IFj-bq-OMM" secondAttribute="centerX" id="nOL-hq-lHE"/>
-                            <constraint firstItem="GWn-El-DuD" firstAttribute="centerY" secondItem="IFj-bq-OMM" secondAttribute="centerY" id="qgT-CA-tcW"/>
-                            <constraint firstItem="9Rt-1S-r7x" firstAttribute="centerX" secondItem="IFj-bq-OMM" secondAttribute="centerX" id="tRa-ZS-gFl"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="홈" image="homekit" catalog="system" id="ogX-cD-LbM"/>
                     <navigationItem key="navigationItem" id="hJb-rC-gTo"/>
