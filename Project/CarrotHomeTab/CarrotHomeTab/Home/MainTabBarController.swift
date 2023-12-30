@@ -17,22 +17,17 @@ class MainTabBarController: UITabBarController {
         delegate = self
     }
     
+    
+    // self.selectedViewController는 viewDidLoad 시점에서는 nil, viewWillAppear 시점에서는 nil이 아님
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let selectedViewController = self.selectedViewController {
+            updateNavigationItem(viewController: selectedViewController)
+        }
+    }
+    
     // 초기 앱 진입후에 View Controller에 따라 Navigation Item 업데이트
     private func updateNavigationItem(viewController: UIViewController) {
-        
-    }
-}
-
-// 각 탭에 맞게 네비게이션 바 구성 [✅]
-// 홈: 타이틀 - 피드, 서치 ✅
-// 동네 활동: 타이틀 - 피드 ✅
-// 내 근처: 타이틀 ✅
-// 채팅: 타이틀 - 피드 ✅
-// 나의 당근: 타이틀 - 설정 ✅
-extension MainTabBarController: UITabBarControllerDelegate {
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        print("\(viewController) Tabbed")
-        
         switch viewController {
         case is HomeViewController:
             let titleConfig = CustomBarItemConfigure(title: "심곡동", handler: { })
@@ -52,6 +47,7 @@ extension MainTabBarController: UITabBarControllerDelegate {
             
             navigationItem.leftBarButtonItem = titleItem
             navigationItem.rightBarButtonItems = [searchItem, feedItem]
+            navigationItem.backButtonDisplayMode = .minimal
             
         case is MyTownViewController:
             let titleConfig = CustomBarItemConfigure(title: "심곡동", handler: { })
@@ -65,6 +61,7 @@ extension MainTabBarController: UITabBarControllerDelegate {
             
             navigationItem.leftBarButtonItem = titleItem
             navigationItem.rightBarButtonItems = [feedItem]
+            navigationItem.backButtonDisplayMode = .minimal
             
         case is ChatViewController:
             let titleConfig = CustomBarItemConfigure(title: "채팅", handler: { })
@@ -78,6 +75,7 @@ extension MainTabBarController: UITabBarControllerDelegate {
             
             navigationItem.leftBarButtonItem = titleItem
             navigationItem.rightBarButtonItems = [feedItem]
+            navigationItem.backButtonDisplayMode = .minimal
             
         case is MyProfileViewController:
             let titleConfig = CustomBarItemConfigure(title: "나의 당근", handler: { })
@@ -91,6 +89,7 @@ extension MainTabBarController: UITabBarControllerDelegate {
             
             navigationItem.leftBarButtonItem = titleItem
             navigationItem.rightBarButtonItems = [settingItem]
+            navigationItem.backButtonDisplayMode = .minimal
             
         default:
             let titleConfig = CustomBarItemConfigure(title: "나의 당근", handler: { })
@@ -98,6 +97,20 @@ extension MainTabBarController: UITabBarControllerDelegate {
             
             navigationItem.leftBarButtonItem = titleItem
             navigationItem.rightBarButtonItems = []
+            navigationItem.backButtonDisplayMode = .minimal
         }
+    }
+}
+
+// 각 탭에 맞게 네비게이션 바 구성 [✅]
+// 홈: 타이틀 - 피드, 서치 ✅
+// 동네 활동: 타이틀 - 피드 ✅
+// 내 근처: 타이틀 ✅
+// 채팅: 타이틀 - 피드 ✅
+// 나의 당근: 타이틀 - 설정 ✅
+extension MainTabBarController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        print("\(viewController) Tabbed")
+        updateNavigationItem(viewController: viewController)
     }
 }
