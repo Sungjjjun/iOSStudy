@@ -37,13 +37,25 @@ class HomeViewController: UIViewController {
             return cell
         })
         
+        // Data -> Snapshot
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems([], toSection: .main)
+        dataSource.apply(snapshot)
+        
         // Layout -> Compositional Layout
         collectionView.collectionViewLayout = layout()
         collectionView.delegate = self
     }
     
+    private func applyItems(_ items: [ItemInfo]) {
+        var snapshot = dataSource.snapshot()
+        snapshot.appendItems(items, toSection: .main)
+        dataSource.apply(snapshot)
+    }
+    
     private func layout() -> UICollectionViewCompositionalLayout {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(150))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(150))
@@ -63,10 +75,7 @@ class HomeViewController: UIViewController {
             .receive(on: RunLoop.main)
             .sink { items in
                 print("Update Collection View: \(items)")
-                var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
-                snapshot.appendSections([.main])
-                snapshot.appendItems(items, toSection: .main)
-                self.dataSource.apply(snapshot)
+                self.applyItems(items)
             }.store(in: &subscriptions)
         
         // Input(User Interaction)
@@ -77,16 +86,10 @@ class HomeViewController: UIViewController {
                 self.navigationController?.pushViewController(detailViewController, animated: true)
             }.store(in: &subscriptions)
     }
-    
-//    @IBAction func ctaButtonTapped(_ sender: Any) {
-//        let detailStoryBoard = UIStoryboard(name: "Detail", bundle: nil)
-//        let detailViewController = detailStoryBoard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-//        navigationController?.pushViewController(detailViewController, animated: true)
-//    }
 }
 
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Selected: \(indexPath.item.description)")
+        print("Selected:")
     }
 }
