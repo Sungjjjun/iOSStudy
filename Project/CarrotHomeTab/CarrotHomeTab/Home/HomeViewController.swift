@@ -83,6 +83,7 @@ class HomeViewController: UIViewController {
             .sink { item in
                 let detailStoryBoard = UIStoryboard(name: "Detail", bundle: nil)
                 let detailViewController = detailStoryBoard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+                detailViewController.detailViewModel = DetailViewModel(network: NetworkService(configuration: .default), itemInfo: item)
                 self.navigationController?.pushViewController(detailViewController, animated: true)
             }.store(in: &subscriptions)
     }
@@ -90,6 +91,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Selected:")
+        let item = viewModel.items[indexPath.item]
+        viewModel.itemTapped.send(item)
     }
 }

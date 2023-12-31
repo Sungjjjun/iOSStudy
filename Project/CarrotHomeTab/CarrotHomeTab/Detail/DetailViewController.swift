@@ -5,25 +5,21 @@
 //  Created by 박성준 on 2023/12/28.
 //
 
+
+// ItemInfo에 있는 PostID를 통해 서버에 해당 제품의 상세 정보 요청
 import UIKit
 
 class DetailViewController: UIViewController {
 
+    var detailViewModel: DetailViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        bind()
+        detailViewModel.fetch()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func bind() {
+        
     }
-    */
-
 }

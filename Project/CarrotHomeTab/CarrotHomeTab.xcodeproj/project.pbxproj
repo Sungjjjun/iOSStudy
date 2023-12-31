@@ -33,6 +33,8 @@
 		CAC21B552B3FEF77006D6307 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B542B3FEF77006D6307 /* HomeViewModel.swift */; };
 		CAC21B572B400DCD006D6307 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B562B400DCD006D6307 /* HomeViewCell.swift */; };
 		CAC21B5A2B401737006D6307 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CAC21B592B401737006D6307 /* Kingfisher */; };
+		CAC21B5C2B4167BE006D6307 /* ItemInfoDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B5B2B4167BE006D6307 /* ItemInfoDetails.swift */; };
+		CAC21B5E2B4167DA006D6307 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC21B5D2B4167DA006D6307 /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		CAC21B522B3FEF39006D6307 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		CAC21B542B3FEF77006D6307 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CAC21B562B400DCD006D6307 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
+		CAC21B5B2B4167BE006D6307 /* ItemInfoDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemInfoDetails.swift; path = ../../../../../../../../ItemInfoDetails.swift; sourceTree = "<group>"; };
+		CAC21B5D2B4167DA006D6307 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				94A38E4C2868307C000691E1 /* ItemInfo.swift */,
+				CAC21B5B2B4167BE006D6307 /* ItemInfoDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 			children = (
 				CAC21B352B3D54CD006D6307 /* DetailViewController.swift */,
 				CAC21B3B2B3D55DB006D6307 /* Detail.storyboard */,
+				CAC21B5D2B4167DA006D6307 /* DetailViewModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -401,7 +407,9 @@
 				CAC21B382B3D551F006D6307 /* MainNavigationViewController.swift in Sources */,
 				CAC21B552B3FEF77006D6307 /* HomeViewModel.swift in Sources */,
 				CAC21B3A2B3D5568006D6307 /* MainTabBarController.swift in Sources */,
+				CAC21B5C2B4167BE006D6307 /* ItemInfoDetails.swift in Sources */,
 				94A38E512868307C000691E1 /* ItemInfo.swift in Sources */,
+				CAC21B5E2B4167DA006D6307 /* DetailViewModel.swift in Sources */,
 				94BB228028669A15004FC34D /* SceneDelegate.swift in Sources */,
 				9402EE1728673FB100D33FDD /* Publisher+Utils.swift in Sources */,
 				9402EE1128673D9C00D33FDD /* NetworkService.swift in Sources */,
