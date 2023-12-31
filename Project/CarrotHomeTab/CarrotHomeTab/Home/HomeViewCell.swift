@@ -20,10 +20,16 @@ class HomeViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         thumbnailImage.layer.cornerRadius = 10
+        thumbnailImage.layer.masksToBounds = true
+        thumbnailImage.tintColor = .systemGray
     }
     
     func configure(_ item: ItemInfo) {
-        thumbnailImage.kf.setImage(with: URL(string: item.thumbnailURL)!)
+        thumbnailImage.kf.setImage(
+            with: URL(string: item.thumbnailURL)!,
+//            with: URL(string: ""),
+            placeholder: UIImage(systemName: "photo.fill")
+        )
         titleLabel.text = item.title
         locationLabel.text = item.location
         priceLabel.text = "\(formatNumber(item.price)) 원"
