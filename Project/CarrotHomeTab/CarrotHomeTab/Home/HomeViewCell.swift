@@ -26,8 +26,16 @@ class HomeViewCell: UICollectionViewCell {
         thumbnailImage.kf.setImage(with: URL(string: item.thumbnailURL)!)
         titleLabel.text = item.title
         locationLabel.text = item.location
-        priceLabel.text = "\(item.price) 원"
+        priceLabel.text = "\(formatNumber(item.price)) 원"
         numOfChatsLabel.text = "\(item.numOfChats)"
         numOfLikesLabel.text = "\(item.numOfLikes)"
+    }
+    
+    private func formatNumber(_ price: Int) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        
+        let result = formatter.string(from: NSNumber(integerLiteral: price)) ?? ""
+        return result
     }
 }
