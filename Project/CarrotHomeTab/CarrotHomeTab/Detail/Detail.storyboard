@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vas-Ym-75n">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1169.3333333333333"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1024.3333333333333"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEF-oK-MWV">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="393"/>
@@ -40,10 +40,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fci-D5-mzJ">
-                                                <rect key="frame" x="0.0" y="393.00000000000006" width="393" height="776.33333333333348"/>
+                                                <rect key="frame" x="0.0" y="393.00000000000006" width="393" height="631.33333333333348"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HgQ-Ed-dbk">
-                                                        <rect key="frame" x="20" y="0.0" width="353" height="776.33333333333337"/>
+                                                        <rect key="frame" x="20" y="0.0" width="353" height="631.33333333333337"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gpf-EY-J5N">
                                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="100"/>
@@ -88,25 +88,25 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fx7-1F-cFm">
-                                                                <rect key="frame" x="0.0" y="100" width="353" height="276.33333333333331"/>
+                                                                <rect key="frame" x="0.0" y="100.00000000000001" width="353" height="131.33333333333337"/>
                                                                 <subviews>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="I7E-jz-DUD">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="276.33333333333331"/>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="I7E-jz-DUD">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="131.33333333333334"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Kp-cg-5CE">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="353" height="235.66666666666666"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Kp-cg-5CE">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="353" height="30"/>
+                                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uU9-9O-iqU">
-                                                                                <rect key="frame" x="0.0" y="235.66666666666663" width="353" height="20.333333333333343"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uU9-9O-iqU">
+                                                                                <rect key="frame" x="0.0" y="40" width="353" height="20.333333333333329"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                                <nil key="textColor"/>
+                                                                                <color key="textColor" systemColor="systemGrayColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyG-84-6p7">
-                                                                                <rect key="frame" x="0.0" y="256" width="353" height="20.333333333333314"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="쿠팡에서 직접매입해 판매하는 애플 정품입니다.  22년 2월제조 입니다.  판교동직거래" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyG-84-6p7">
+                                                                                <rect key="frame" x="0.0" y="70.333333333333371" width="353" height="61"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -123,7 +123,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYd-hz-dnG">
-                                                                <rect key="frame" x="0.0" y="376.33333333333337" width="353" height="400"/>
+                                                                <rect key="frame" x="0.0" y="231.33333333333337" width="353" height="400"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some Contents 🗓️" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIh-e4-FnX">
                                                                         <rect key="frame" x="89.333333333333329" y="188" width="174.33333333333337" height="24"/>
@@ -171,6 +171,15 @@
                             <constraint firstItem="CdF-CP-hgu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="oNY-KD-Voj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="itemInfoDescription" destination="TyG-84-6p7" id="Ohm-Eb-gwr"/>
+                        <outlet property="itemInfoTitle" destination="9Kp-cg-5CE" id="7Kx-J9-JON"/>
+                        <outlet property="itemThumbnail" destination="nK1-pY-4OL" id="yoa-xg-KQW"/>
+                        <outlet property="userLocation" destination="UzP-qC-nWc" id="fyW-YF-W4h"/>
+                        <outlet property="userNickName" destination="nrS-2q-sAu" id="hNI-q1-JXA"/>
+                        <outlet property="userTemperature" destination="Kc3-Ex-v7p" id="dkj-QM-Q2Z"/>
+                        <outlet property="userThumbnail" destination="SFD-K7-wBM" id="qwg-mz-GOj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

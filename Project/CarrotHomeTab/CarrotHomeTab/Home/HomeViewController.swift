@@ -83,7 +83,7 @@ class HomeViewController: UIViewController {
             .sink { item in
                 let detailStoryBoard = UIStoryboard(name: "Detail", bundle: nil)
                 let detailViewController = detailStoryBoard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-                detailViewController.detailViewModel = DetailViewModel(network: NetworkService(configuration: .default), itemInfo: item)
+                detailViewController.viewModel = DetailViewModel(network: NetworkService(configuration: .default), itemInfo: item)
                 self.navigationController?.pushViewController(detailViewController, animated: true)
             }.store(in: &subscriptions)
     }
