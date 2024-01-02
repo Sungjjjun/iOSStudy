@@ -160,24 +160,97 @@
                                     <constraint firstAttribute="bottom" secondItem="Vas-Ym-75n" secondAttribute="bottom" id="oAy-MX-paC"/>
                                 </constraints>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jsx-Vv-7XO">
+                                <rect key="frame" x="0.0" y="732" width="393" height="120"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="78n-aK-iHB">
+                                        <rect key="frame" x="15" y="10" width="363" height="60"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lvk-kN-HfZ">
+                                                <rect key="frame" x="0.0" y="2" width="30" height="57"/>
+                                                <color key="tintColor" systemColor="systemGrayColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="lVK-U6-bUH"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="osR-sV-ujm">
+                                                <rect key="frame" x="50" y="0.0" width="143" height="60"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200,000 원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvn-6C-mRR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="143" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="f1m-CM-UgK"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가격 제안 불가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baH-ZD-j3p">
+                                                        <rect key="frame" x="0.0" y="35" width="143" height="25"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i87-9D-srv">
+                                                <rect key="frame" x="213" y="0.0" width="150" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="gUG-xc-159"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="채팅하기">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="8w5-Ej-VGD"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HAm-qB-e4y">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="Brt-vP-U44"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="78n-aK-iHB" firstAttribute="leading" secondItem="jsx-Vv-7XO" secondAttribute="leading" constant="15" id="3r7-ld-q36"/>
+                                    <constraint firstItem="HAm-qB-e4y" firstAttribute="leading" secondItem="jsx-Vv-7XO" secondAttribute="leading" id="IJt-2t-Ywt"/>
+                                    <constraint firstItem="HAm-qB-e4y" firstAttribute="top" secondItem="jsx-Vv-7XO" secondAttribute="top" id="P52-ID-u7l"/>
+                                    <constraint firstItem="78n-aK-iHB" firstAttribute="top" secondItem="jsx-Vv-7XO" secondAttribute="top" constant="10" id="bJT-5o-mQn"/>
+                                    <constraint firstAttribute="height" constant="120" id="is1-hk-7Dk"/>
+                                    <constraint firstAttribute="trailing" secondItem="HAm-qB-e4y" secondAttribute="trailing" id="jzW-gY-pSJ"/>
+                                    <constraint firstItem="78n-aK-iHB" firstAttribute="centerX" secondItem="jsx-Vv-7XO" secondAttribute="centerX" id="kgC-Qt-NjK"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="CdF-CP-hgu" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="0AG-Po-3nE"/>
                             <constraint firstItem="CdF-CP-hgu" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="4VM-ls-Pz2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jsx-Vv-7XO" secondAttribute="trailing" id="GBY-YJ-tDQ"/>
                             <constraint firstItem="Vas-Ym-75n" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="RsN-yW-Qe2"/>
+                            <constraint firstItem="jsx-Vv-7XO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="d2o-eY-Ljf"/>
                             <constraint firstItem="CdF-CP-hgu" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="l0k-8G-hb6"/>
                             <constraint firstItem="CdF-CP-hgu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="oNY-KD-Voj"/>
+                            <constraint firstAttribute="bottom" secondItem="jsx-Vv-7XO" secondAttribute="bottom" id="p4Z-cv-lDU"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="itemInfoDescription" destination="TyG-84-6p7" id="Ohm-Eb-gwr"/>
                         <outlet property="itemInfoTitle" destination="9Kp-cg-5CE" id="7Kx-J9-JON"/>
+                        <outlet property="itemPriceLabel" destination="Zvn-6C-mRR" id="Wtl-aH-dY9"/>
                         <outlet property="itemThumbnail" destination="nK1-pY-4OL" id="yoa-xg-KQW"/>
                         <outlet property="userLocation" destination="UzP-qC-nWc" id="fyW-YF-W4h"/>
                         <outlet property="userNickName" destination="nrS-2q-sAu" id="hNI-q1-JXA"/>
-                        <outlet property="userTemperature" destination="Kc3-Ex-v7p" id="dkj-QM-Q2Z"/>
+                        <outlet property="userTemperature" destination="Kc3-Ex-v7p" id="A8u-q7-ad0"/>
                         <outlet property="userThumbnail" destination="SFD-K7-wBM" id="qwg-mz-GOj"/>
                     </connections>
                 </viewController>
@@ -187,6 +260,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

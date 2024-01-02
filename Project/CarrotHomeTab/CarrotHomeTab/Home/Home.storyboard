@@ -141,10 +141,20 @@
                                                         </view>
                                                     </subviews>
                                                 </stackView>
+                                                <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWe-05-iVT">
+                                                    <rect key="frame" x="0.0" y="119" width="414" height="1"/>
+                                                    <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="tEg-jB-Plt"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="hWe-05-iVT" secondAttribute="bottom" id="PpN-vm-Ncw"/>
                                                 <constraint firstItem="k3c-qy-Rrz" firstAttribute="top" secondItem="yuU-Bm-Jb3" secondAttribute="top" id="YJF-X8-fdN"/>
+                                                <constraint firstItem="hWe-05-iVT" firstAttribute="leading" secondItem="yuU-Bm-Jb3" secondAttribute="leading" id="eLl-Gv-SNN"/>
                                                 <constraint firstItem="k3c-qy-Rrz" firstAttribute="leading" secondItem="yuU-Bm-Jb3" secondAttribute="leading" id="kmc-kX-rN0"/>
+                                                <constraint firstAttribute="trailing" secondItem="hWe-05-iVT" secondAttribute="trailing" id="lRi-VR-2ms"/>
                                                 <constraint firstAttribute="trailing" secondItem="k3c-qy-Rrz" secondAttribute="trailing" id="sVH-Hz-sUI"/>
                                                 <constraint firstAttribute="bottom" secondItem="k3c-qy-Rrz" secondAttribute="bottom" id="zRV-mQ-47Z"/>
                                             </constraints>
