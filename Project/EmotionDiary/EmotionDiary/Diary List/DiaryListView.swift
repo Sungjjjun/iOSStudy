@@ -32,8 +32,12 @@ struct DiaryListView: View {
                                 let items = viewModel.dic[key] ?? []
                                 let orderedItems = items.sorted(by: { $0.date < $1.date })
                                 ForEach(orderedItems) { item in
-                                    MoodDiaryCell(diary: item)
-                                        .frame(height: 50)
+                                    NavigationLink {
+                                        DiaryDetailsView(diary: item)
+                                    } label: {
+                                        MoodDiaryCell(diary: item)
+                                            .frame(height: 50)
+                                    }
                                 }
                             } header: {
                                 Text(formattedSectionTitle(key))
