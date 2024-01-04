@@ -25,7 +25,7 @@ struct DiaryDateInputView: View {
                 .datePickerStyle(.graphical)
                 Spacer()
                 NavigationLink {
-                    DiaryMoodInputView()
+                    DiaryMoodInputView(viewModel: viewModel)
                 } label: {
                     Text("Next")
                         .frame(width: 200, height: 80)
