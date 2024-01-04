@@ -14,13 +14,26 @@ struct DiaryDateInputView: View {
     @StateObject var viewModel: DiaryViewModel
     
     var body: some View {
-        VStack {
-            DatePicker(
-                "Start Date",
-                selection: $viewModel.date,
-                displayedComponents: [.date]
-            )
-            .datePickerStyle(.graphical)
+        NavigationView {
+            VStack {
+                Spacer()
+                DatePicker(
+                    "Start Date",
+                    selection: $viewModel.date,
+                    displayedComponents: [.date]
+                )
+                .datePickerStyle(.graphical)
+                Spacer()
+                NavigationLink {
+                    DiaryMoodInputView()
+                } label: {
+                    Text("Next")
+                        .frame(width: 200, height: 80)
+                        .foregroundColor(.white)
+                        .background(.pink)
+                        .cornerRadius(40)
+                }
+            }
         }
     }
 }
