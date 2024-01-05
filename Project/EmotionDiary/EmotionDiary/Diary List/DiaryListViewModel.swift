@@ -20,7 +20,7 @@ import Combine
 final class DiaryListViewModel: ObservableObject {
     let storage: MoodDiaryStorage
     
-    @Published var list: [MoodDiary] = MoodDiary.list
+    @Published var list: [MoodDiary] = []
     @Published var dic: [String : [MoodDiary]] = [:]
     var subscriptions = Set<AnyCancellable>()
     

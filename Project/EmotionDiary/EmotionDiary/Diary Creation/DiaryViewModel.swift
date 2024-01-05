@@ -72,4 +72,8 @@ final class DiaryViewModel: ObservableObject {
         // 페이지 닫기 [✅]
         isPresented.wrappedValue = false
     }
+    
+    func delete() {
+        
+    }
 }
