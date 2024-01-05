@@ -12,6 +12,7 @@ import Combine
 final class DiaryViewModel: ObservableObject {
     @Published var diary: MoodDiary = MoodDiary(date: "", text: "", mood: .great)
     
+    @Published var diaries: Binding<[MoodDiary]>
     @Published var isPresented: Binding<Bool>
     @Published var date: Date = Date()
     @Published var mood: Mood = .great
@@ -19,8 +20,9 @@ final class DiaryViewModel: ObservableObject {
     
     var subscriptions = Set<AnyCancellable>()
     
-    init(isPresented: Binding<Bool>) {
+    init(isPresented: Binding<Bool>, diaries: Binding<[MoodDiary]>) {
         self.isPresented = isPresented
+        self.diaries = diaries
         
         // 날짜 업데이트
         $date
@@ -64,7 +66,10 @@ final class DiaryViewModel: ObservableObject {
         guard diary.date.isEmpty == false else { return }
         print("일기 작성 완료")
         
-        // 저장 및 페이지 닫기
+        // 저장 [✅]
+        diaries.wrappedValue.append(diary)
+        
+        // 페이지 닫기 [✅]
         isPresented.wrappedValue = false
     }
 }

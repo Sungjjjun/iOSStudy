@@ -56,7 +56,7 @@ struct DiaryMoodInputView: View {
 
 struct DiaryMoodInputView_Previews: PreviewProvider {
     static var previews: some View {
-        DiaryMoodInputView(viewModel: DiaryViewModel(isPresented: .constant(false)))
+        DiaryMoodInputView(viewModel: DiaryViewModel(isPresented: .constant(false), diaries: .constant(MoodDiary.list)))
             .preferredColorScheme(.dark)
     }
 }

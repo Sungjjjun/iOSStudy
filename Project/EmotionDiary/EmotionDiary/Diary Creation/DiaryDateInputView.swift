@@ -41,7 +41,7 @@ struct DiaryDateInputView: View {
 struct DiaryDateInputView_Previews: PreviewProvider {
     static var previews: some View {
         DiaryDateInputView(
-            viewModel: DiaryViewModel(isPresented: .constant(false))
+            viewModel: DiaryViewModel(isPresented: .constant(false), diaries: .constant(MoodDiary.list))
         )
             .preferredColorScheme(.dark)
     }
